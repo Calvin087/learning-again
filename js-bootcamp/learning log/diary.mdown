@@ -1,15 +1,15 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
-###2019-12-06 18:06:34
+### 2019-12-06 18:06:34
 
 Managed to hack together a working example by editing the copied js. Couldn't write it from memory as this would take forever. Hopefully with time I'll be able to write it from rote.
 
-###2019-12-06 17:18:04
+### 2019-12-06 17:18:04
 
 Going to attempt to update user input for my todo app using HTML and js listeners.
 
-###2019-12-05 19:34:39
+### 2019-12-05 19:34:39
 
 Figuring out how to commit different types of files here.
 Possibly could use this as a todo list of sorts somewhere.
