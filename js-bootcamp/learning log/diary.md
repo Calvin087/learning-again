@@ -1,3 +1,7 @@
+2019-12-06 17:18:04
+
+Going to attempt to update user input for my todo app using HTML and js listeners.
+
 2019-12-05 19:34:39
 
 Figuring out how to commit different types of files here.
