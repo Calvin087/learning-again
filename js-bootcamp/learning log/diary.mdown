@@ -10,8 +10,8 @@ Had to look up how to add objects to an object array. Keep forgetting this but i
 
 ```javascript
         array.push({
-        text: e.target.elements.text.value, //values of the object being pushed
-        completed: false
+            text: e.target.elements.text.value, //values of the object being pushed
+            completed: false
         })
 ```
 
