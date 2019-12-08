@@ -1,6 +1,20 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2019-12-08 17:13:42
+
+Started working again after putting up the christmas tree.
+Learned how to prevent the browser from refreshing after a form submit
+                e.preventDefault()
+Had to look up how to add objects to an object array. Keep forgetting this but instead of taking 40 mins, only took me to mins to find the answer and remember what to do.
+
+```
+        array.push({
+        text: e.target.elements.text.value, //values of the object being pushed
+        completed: false
+        })
+```
+
 ### 2019-12-06 18:06:34
 
 Managed to hack together a working example by editing the copied js. Couldn't write it from memory as this would take forever. Hopefully with time I'll be able to write it from rote.
