@@ -5,7 +5,12 @@ List of syntax for MD files.
 
 Started working again after putting up the christmas tree.
 Learned how to prevent the browser from refreshing after a form submit
-                e.preventDefault()
+
+```javascript
+    e.preventDefault()
+
+```
+
 Had to look up how to add objects to an object array. Keep forgetting this but instead of taking 40 mins, only took me to mins to find the answer and remember what to do.
 
 ```javascript
