@@ -4,9 +4,9 @@ List of syntax for MD files.
 
 ### 2019-12-09 11:56:48
 
-- [ ] Need to look up JSON tutorials, as the concept is something new that I don't quite understand.
+#### Todos
 
-PARSE etc
+- [ ] Need to look up JSON tutorials, as the concept is something new that I don't quite understand. PARSE etc
 
 - [ ] Local storage is also something that should be looked into. **CRUD**
 
