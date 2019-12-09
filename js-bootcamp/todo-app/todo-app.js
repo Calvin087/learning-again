@@ -1,19 +1,10 @@
-const todos = [{
-    text: 'Order cat food',
-    completed: false
-}, {
-    text: 'Clean kitchen',
-    completed: true
-}, {
-    text: 'Buy food',
-    completed: true
-}, {
-    text: 'Do work',
-    completed: false
-}, {
-    text: 'Exercise',
-    completed: true
-}]
+let todos = []
+
+const todosJSON = localStorage.getItem('todos')
+
+if (todosJSON !== null) {
+    todos = JSON.parse(todosJSON)
+}
 
 const filters = {
     searchText: '',
@@ -61,6 +52,7 @@ document.querySelector('#new-todo').addEventListener('submit', function (e) {
         text: e.target.elements.text.value,
         completed: false
     })
+    localStorage.setItem('todos', JSON.stringify(todos))
     renderTodos(todos, filters)
     e.target.elements.text.value = ''
 })

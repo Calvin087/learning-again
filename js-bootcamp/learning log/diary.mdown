@@ -1,6 +1,21 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+
+### 2019-12-09 11:56:48
+
+Learned something cool with Dropdowns and printing the sort method to the console.
+
+```html
+        <select id="filter-by">
+
+            <option value="byEdited">Sort by last edited</option>
+            <option value="byCreated">Sort by recently created</option>
+            <option value="byAlphabetical">Sort by alphabetically</option>
+
+        </select>
+```
+
 ### 2019-12-08 17:13:42
 
 Started working again after putting up the christmas tree.
