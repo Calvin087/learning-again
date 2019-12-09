@@ -4,11 +4,11 @@ List of syntax for MD files.
 
 ### 2019-12-09 11:56:48
 
-[ ] Need to look up JSON tutorials, as the concept is something new that I don't quite understand.
+- [ ] Need to look up JSON tutorials, as the concept is something new that I don't quite understand.
 
 PARSE etc
 
-[ ] Local storage is also something that should be looked into. **CRUD**
+- [ ] Local storage is also something that should be looked into. **CRUD**
 
 Learned something cool with Dropdowns and printing the sort method to the console.
 
