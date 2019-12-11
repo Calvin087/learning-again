@@ -1,6 +1,48 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2019-12-11 20:53:27
+Super lost with the refactoring of functions. The reason for it kind of makes sense but deciding how to organise it all is a little confusing. passing functions into functions is confusing.
+
+```javascript
+
+const renderTodos = function (todos, filters) {
+    let filteredTodos = todos.filter(function (todo) {
+
+        const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+        const hideCompletedMatch = !filters.hideCompleted || !todo.completed
+        
+        return searchTextMatch && hideCompletedMatch
+    })
+
+    const incompleteTodos = filteredTodos.filter(function (todo) {
+        return !todo.completed
+    })
+    
+ // HERE ---------------->   
+    document.querySelector('#todos').innerHTML = ''
+    document.querySelector('#todos').appendChild(generateSummaryDom(incompleteTodos))
+    
+    filteredTodos.forEach(function (todo){
+        document.querySelector('#todos').appendChild(generateTodoDom(todo))
+    })
+
+}
+
+const generateTodoDom = function(todo){
+    const p = document.createElement('p')
+    p.textContent = todo.text
+    return p
+}
+
+// HERE ----------------> incomplete todos
+const generateSummaryDom = function(incompleteTodos){
+    const summary = document.createElement('h2')
+    summary.textContent = `You have ${incompleteTodos.length} todos left`
+    return summary
+}
+
+```
 
 ### 2019-12-09 11:56:48
 
