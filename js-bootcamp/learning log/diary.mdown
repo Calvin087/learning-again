@@ -1,6 +1,35 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2019-12-12 19:55:08
+
+Maybe should find a way to organise to do list. Possibly another file or append it to this one.
+discovered the JS can add elements like spans and divs, also buttons and check boxes, which is pretty cool.
+
+```javascript
+const generateTodoDom = function(todo){
+    const todoEl = document.createElement('div')
+    const checkbox = document.createElement('input')
+    const todoText = document.createElement('span')
+    const removeButton = document.createElement('button')
+
+
+    // set up todo checkbox
+    checkbox.setAttribute('type', 'checkbox')
+    todoEl.appendChild(checkbox)
+
+    // Set up todo text
+    todoText.textContent = todo.text
+    todoEl.appendChild(todoText)
+
+    //  Set up the remove button
+    removeButton.textContent = 'x'
+    todoEl.appendChild(removeButton)
+}
+
+    return todoEl
+```
+
 ### 2019-12-11 20:53:27
 Super lost with the refactoring of functions. The reason for it kind of makes sense but deciding how to organise it all is a little confusing. passing functions into functions is confusing.
 

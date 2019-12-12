@@ -3,6 +3,8 @@ const getSavedTodos = function(){
 
 if (todosJSON !== null) {
     return JSON.parse(todosJSON)
+    } else {
+        return []
     }
 }
 
@@ -33,10 +35,27 @@ const renderTodos = function (todos, filters) {
 }
 
 const generateTodoDom = function(todo){
-    const p = document.createElement('p')
-    p.textContent = todo.text
-    return p
+    const todoEl = document.createElement('div')
+    const checkbox = document.createElement('input')
+    const todoText = document.createElement('span')
+    const removeButton = document.createElement('button')
+
+
+    // set up todo checkbox
+    checkbox.setAttribute('type', 'checkbox')
+    todoEl.appendChild(checkbox)
+
+    // Set up todo text
+    todoText.textContent = todo.text
+    todoEl.appendChild(todoText)
+
+    //  Set up the remove button
+    removeButton.textContent = 'x'
+    todoEl.appendChild(removeButton)
+
+    return todoEl
 }
+
 
 const generateSummaryDom = function(incompleteTodos){
     const summary = document.createElement('h2')
