@@ -1,6 +1,12 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2019-12-16 20:00:04
+
+Tried to get a few hours in today. Organising Xmas has been a bit annoying when it comes to the studying aspect of things, but here we are. Looking into hooking up buttons to javascript listeners and creating buttons to delete specific ID elements.
+
+Added a library in JS using UUIDV4 - gives and element a Unique identifier which saves hours of typing and screwing up doing it from scratch.
+
 ### 2019-12-12 19:55:08
 
 Maybe should find a way to organise to do list. Possibly another file or append it to this one.
