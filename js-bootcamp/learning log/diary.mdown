@@ -1,6 +1,18 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2019-12-17 19:04:12
+
+Dom manipulation, creating links using JS. Just need to change the element that is being created and set the attribute. Had no idea how to get this done even with a google search. Still learning what is even possible! Annoying
+
+```js
+
+const textEl = document.createElement('a')
+
+textEl.setAttribute('href', '/edit.html')
+
+```
+
 ### 2019-12-16 20:00:04
 
 Tried to get a few hours in today. Organising Xmas has been a bit annoying when it comes to the studying aspect of things, but here we are. Looking into hooking up buttons to javascript listeners and creating buttons to delete specific ID elements.
