@@ -1,6 +1,17 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2019-12-19 19:58:04
+
+synced up a library called moment.js, gives me the ability to set times and dates then print them in a readable string. Super interesting, now wondering what other kinds of libraries there are and what I can do with them.
+
+```js
+moment().valueOf()
+```
+etc
+
+Still frustrated that I can't figure out the problems once the project starts to grow out of site in various files. I start to get lost with what section is doing what and so on, but we'll get there eventually.
+
 ### 2019-12-17 19:04:12
 
 Dom manipulation, creating links using JS. Just need to change the element that is being created and set the attribute. Had no idea how to get this done even with a google search. Still learning what is even possible! Annoying
