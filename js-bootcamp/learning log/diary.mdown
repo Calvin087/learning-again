@@ -1,6 +1,54 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2019-12-30 12:24:22
+
+Christmas is finished and a few days without my laptop gave me a strange feeling. Back to studying things that I don't understand.
+
+Got bought the book, Javascript the good parts which is useful and also started reading eloquent Js which has challenges that I couldn't even begin to tackle..... which is worrying for me.
+
+Something that I want to remember for later is that I don't understand this completely. Sorting things using filters.
+
+```js
+// Sort your notes by one of three ways
+const sortNotes = function (notes, sortBy) {
+    if (sortBy === 'byEdited') {
+        return notes.sort(function (a, b) {
+            if (a.updatedAt > b.updatedAt) {
+                return -1
+            } else if (a.updatedAt < b.updatedAt) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else if (sortBy === 'byCreated') {
+        return notes.sort (function (a, b) {
+            if (a.createdAt > b.createdAt) {
+                return -1
+            } else if (a.createdAt < b.createdAt) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else if (sortBy === 'alphabetical') {
+        return notes.sort(function (a, b) {
+            if (a.title.toLowerCase() < b.title.toLowerCase()) {
+                return -1
+            } else if (a.title.toLowerCase() > b.title.toLowerCase()) {
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else {
+        return notes
+    }
+}
+```
+
+
 ### 2019-12-19 19:58:04
 
 synced up a library called moment.js, gives me the ability to set times and dates then print them in a readable string. Super interesting, now wondering what other kinds of libraries there are and what I can do with them.
