@@ -3,6 +3,41 @@ List of syntax for MD files.
 
 ### 2019-12-30 12:24:22
 
+Arrow functions
+
+```js
+const square = (num) =>  num * num
+
+const people = [{
+    name: 'Anderew',
+    age: 27
+}, {
+    name: 'Vikram',
+    age: 31
+}, {
+    name: 'Jess',
+    age: 22
+}]
+
+// This is the regular function
+const under30 = people.filter(function (person){
+    return person.age < 30
+})
+
+// This is an Arrow Function / short hand
+const under30 = people.filter((person) => person.age < 30)
+
+console.log(under30)
+
+// Example with the FIND keyword
+const age22 = people.find((person) => person.age === 22)
+
+console.log(age22.name)
+
+```
+
+-----
+
 Christmas is finished and a few days without my laptop gave me a strange feeling. Back to studying things that I don't understand.
 
 Got bought the book, Javascript the good parts which is useful and also started reading eloquent Js which has challenges that I couldn't even begin to tackle..... which is worrying for me.
