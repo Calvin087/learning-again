@@ -1,6 +1,24 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2020-01-02 20:32:19
+
+Conditional Operator replacing an IF statement, apparently not the be all and end all of If statements but useful
+
+```js
+// const message = myAge >= 18 ? 'You can vote!' : 'You cannot vote'
+
+message = myAge >= 18 ? 'You can vote!' : 'You cannot vote'
+
+// IS EQUAL TO
+
+if (myAge >= 18) {
+    message = 'You can vote'
+} else {
+    message = 'You can not vote '
+}
+```
+
 ### 2019-12-30 12:24:22
 
 Arrow functions
