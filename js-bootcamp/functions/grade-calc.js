@@ -2,10 +2,11 @@
 
 let gradeCalc = function (score, totalScore) {
     
-    if(typeof score === "number" && typeof totalScore === "number") {
-
-        let percent = (score / totalScore) * 100
-        let letterGrade = ``
+    if(typeof score !== "number" || typeof totalScore !== "number") {
+        throw Error('Please provide numbers only')
+    }
+        const percent = (score / totalScore) * 100
+        let letterGrade = ''
     
         if (percent >=90) {
             letterGrade = `A`
@@ -20,15 +21,13 @@ let gradeCalc = function (score, totalScore) {
         }
     
         return `You got a ${letterGrade} (${percent}%)`
-
-    }
 }
 
-try {
+        try {
     let result = gradeCalc(10, 100)
     console.log(result)
 } catch (e) {
-    console.log(`you dummy, you didn't enter a number`)
+    console.log(e.message)
 }
 
 
