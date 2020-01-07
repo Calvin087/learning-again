@@ -1,51 +1,23 @@
-/* let myBook = {
-    title: `1984`,
-    author: `George Orwell`,
-    pageCount: 326
-}
-
-console.log(`${myBook.title} by ${myBook.author}`)
-
-myBook.title = `Animal Farm`
-
-console.log(`${myBook.title} by ${myBook.author}`)
-
-Challenge Area
-Name Age Location
-
-let myPerson = {
-    name: `Calvin`,
-    age: 32,
-    location: `Madrid`
-}
-
-console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`)
-
-myPerson.age = myPerson.age + 1
-
-console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`) */
-
-
-
 let myBook = {
-    title: "1984",
-    author: "George Orwell",
+    title: '1984',
+    author: 'George Orwell',
     pageCount: 326
 }
 
-console.log(myBook.title)
 console.log(`${myBook.title} by ${myBook.author}`)
 
-myBook.title = "Animal Farm"
+myBook.title = 'Animal Farm'
 
 console.log(`${myBook.title} by ${myBook.author}`)
 
-let myPerson = {
-    name: "Calvin",
-    age: 32,
-    location: "Madrid"
+// Challenge area
+
+let me = {
+    name: 'Andrew',
+    age: 27,
+    location: 'Philadelphia'
 }
 
-myPerson.age = myPerson.age + 1
-
-console.log(`${myPerson.name} is ${myPerson.age} and lives in ${myPerson.location}`)
+console.log(`${me.name} is ${me.age} and lives in ${me.location}.`)
+me.age = me.age + 1
+console.log(`${me.name} is ${me.age} and lives in ${me.location}.`)

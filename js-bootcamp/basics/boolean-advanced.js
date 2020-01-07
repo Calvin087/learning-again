@@ -1,26 +1,22 @@
 let isAccountLocked = false
-let userRole = "Boss"
+let userRole = 'user'
 
 if (isAccountLocked) {
-    console.log("Your Account is Locked")
-} else if (userRole === "Boss") {
-    console.log("Welcome Boss")
+    console.log('Is account locked')
+} else if (userRole === 'admin') {
+    console.log('Welcome Admin')
 } else {
-    console.log("Welcome")
+    console.log('Welcome')
 }
 
-// challenge area
+// Challenge area
 
-let temp = 180
-
-// it's freezing outside
-// it's hot outside
-// go for it, it's pretty nice
+let temp = 4
 
 if (temp <= 32) {
-    console.log("it's freezing outside")
-} else if (temp >= 120 ) {
-    console.log("It's pretty damn hot")
+    console.log('It is freezing outside')
+} else if (temp >= 110) {
+    console.log('It is hot outside')
 } else {
-    console.log("go for it, it's pretty nice")
+    console.log('Go for it. It is pretty nice out')
 }

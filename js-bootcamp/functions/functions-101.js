@@ -1,21 +1,33 @@
-// Function - input (argument), code, output
+// Function - input (argument), code, output (return value)
 
-/*
 let greetUser = function () {
-    console.log("Welcome User!")
+    console.log('Welcome user!')
 }
 
 greetUser()
-*/
+greetUser()
+greetUser()
 
-
-let convertF = function (fah) {
-    let celcius = (fah - 32) * 5/9
-    return celcius
+let square = function (num) {
+    let result = num * num
+    return result
 }
 
-let tempOne = convertF(68)
-let tempTwo = convertF(32)
+let value = square(3)
+let otherValue = square(10)
+
+console.log(value)
+console.log(otherValue)
+
+// Challenge Area
+
+let convertFahrenheitToCelsius = function (fahrenheit) {
+    let celsius = (fahrenheit - 32) * 5 / 9
+    return celsius
+}
+
+let tempOne = convertFahrenheitToCelsius(32)
+let tempTwo = convertFahrenheitToCelsius(68)
 
 console.log(tempOne)
 console.log(tempTwo)

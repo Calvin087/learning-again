@@ -1,3 +1,5 @@
+'use strict'
+
 const titleElement = document.querySelector('#note-title')
 const bodyElement = document.querySelector('#note-body')
 const removeElement = document.querySelector('#remove-note')
@@ -37,7 +39,7 @@ removeElement.addEventListener('click', (e) => {
 window.addEventListener('storage', (e) => {
     if (e.key === 'notes') {
         notes = JSON.parse(e.newValue)
-        note = notes.find((note) => return note.id === noteId)
+        note = notes.find((note) => note.id === noteId)
 
         if (!note) {
             location.assign('/index.html')

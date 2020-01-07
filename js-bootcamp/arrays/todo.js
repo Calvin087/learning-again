@@ -1,58 +1,52 @@
 const todos = [{
-    text: "Order cat food",
-    completed: true
-}, {
-    text: "Clean kitchen",
+    text: 'Order cat food',
     completed: false
 }, {
-    text: "Buy food",
+    text: 'Clean kitchen',
     completed: true
 }, {
-    text: "Do work",
+    text: 'Buy food',
+    completed: true
+}, {
+    text: 'Do work',
     completed: false
 }, {
-    text: "Exercise",
+    text: 'Exercise',
     completed: true
 }]
+
+const sortTodos = function (todos) {
+    todos.sort(function (a, b) {
+        if (!a.completed && b.completed) {
+            return -1
+        } else if (!b.completed && a.completed) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+}
 
 const deleteTodo = function (todos, todoText) {
     const index = todos.findIndex(function (todo) {
         return todo.text.toLowerCase() === todoText.toLowerCase()
     })
-    
+
     if (index > -1) {
         todos.splice(index, 1)
     }
 }
 
-deleteTodo(todos, "Buy food")
+const getThingsToDo = function (todos) {
+    return todos.filter(function (todo) {
+        return !todo.completed
+    })
+}
+
+sortTodos(todos)
 console.log(todos)
 
-// 1. Convert Array to array of objects -> text, completed - true if completed
-// 2. create function to remove a todo by text value
-
-
-
-
-
-
-
-
-
-// todos.splice(2, 1) // working, choose item 2 and delete 1
-// todos.push(`Check Vaccinations`) // working
-// todos.shift() // working
-
-// console.log(`Your have ${todos.length} todos`) 
-
-// todos.forEach(function (todo, index) {
-//     const num = index + 1
-//     console.log(`${num}. ${todo}`)
-// })
-
-
-// for (let count = 0; count < todos.length; count++) {
-//     let num = count + 1
-//     let todo = todos[count]
-//     console.log(`${num}. ${todo}`)
-// }
+// console.log(getThingsToDo(todos))
+ 
+// deleteTodo(todos, '!!buy food')
+// console.log(todos)

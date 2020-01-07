@@ -1,10 +1,19 @@
-let convertF = function (fah) {
-    let celcius = (fah - 32) * 5/9
-    return celcius
+// Global scope (convertFahrenheitToCelsius, tempOne, tempTwo)
+  // Local scope (fahrenheit, celsius)
+    // Local scope (isFreezing)
+
+let convertFahrenheitToCelsius = function (fahrenheit) {
+    let celsius = (fahrenheit - 32) * 5 / 9
+
+    if (celsius <= 0) {
+        let isFreezing = true
+    }
+
+    return celsius
 }
 
-let tempOne = convertF(68)
-let tempTwo = convertF(32)
+let tempOne = convertFahrenheitToCelsius(32)
+let tempTwo = convertFahrenheitToCelsius(68)
 
 console.log(tempOne)
 console.log(tempTwo)

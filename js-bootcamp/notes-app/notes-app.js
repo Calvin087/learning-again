@@ -1,24 +1,24 @@
+'use strict'
+
 let notes = getSavedNotes()
 
 const filters = {
     searchText: '',
-    sortBy: 'byEditted',
+    sortBy: 'byEdited'
 }
 
 renderNotes(notes, filters)
 
 document.querySelector('#create-note').addEventListener('click', (e) => {
     const id = uuidv4()
-    const timeStamp = moment().valueOf()
-
-
+    const timestamp = moment().valueOf()
 
     notes.push({
         id: id,
         title: '',
         body: '',
-        createdAt: timeStamp,
-        updatedAt: timeStamp,
+        createdAt: timestamp,
+        updatedAt: timestamp
     })
     saveNotes(notes)
     location.assign(`/edit.html#${id}`)

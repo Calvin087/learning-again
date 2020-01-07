@@ -1,13 +1,6 @@
-let fah = 95
+let fahrenheit = 50 // 0c - 273.15k
+let celsius = (fahrenheit - 32) * 5 / 9
+let kelvin = (fahrenheit + 459.67) * 5 / 9
 
-// calculate celcius and store as variable
-// print value
-
-// calculate kelvin and store as variable
-// print value
-
-let cel = (fah - 32) * 5/9
-
-let kel = (fah - 32) * 5/9 + 273.15
-
-console.log ("fahrenheit - " + fah + " = " + "Celcius " + cel + "c" + " " + "Kelvin " + kel + "k")
+console.log(celsius)
+console.log(kelvin)

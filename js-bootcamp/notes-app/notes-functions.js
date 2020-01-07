@@ -1,14 +1,14 @@
+'use strict'
+
 // Read existing notes from localStorage
 const getSavedNotes = () => {
     const notesJSON = localStorage.getItem('notes')
-    
+
     try {
         return notesJSON ? JSON.parse(notesJSON) : []
     } catch (e) {
         return []
-    }
-
-    
+    } 
 }
 
 // Save the notes to localStorage
@@ -65,7 +65,7 @@ const sortNotes = (notes, sortBy) => {
             }
         })
     } else if (sortBy === 'byCreated') {
-        return notes.sort ((a, b) => {
+        return notes.sort((a, b) => {
             if (a.createdAt > b.createdAt) {
                 return -1
             } else if (a.createdAt < b.createdAt) {

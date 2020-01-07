@@ -1,5 +1,5 @@
-let city = "Madrid"
-let country = "Spain"
-let location = city + ", " + country
+let city = 'Philadelphia'
+let country = 'United States'
+let location = city + ', ' + country
 
-console.log (location)
+console.log(location)

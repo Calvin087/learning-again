@@ -1,7 +1,9 @@
+'use strict'
+
 // Fetch existing todos from localStorage
 const getSavedTodos = () => {
     const todosJSON = localStorage.getItem('todos')
-    
+
     try {
         return todosJSON ? JSON.parse(todosJSON) : []
     } catch (e) {
@@ -12,6 +14,24 @@ const getSavedTodos = () => {
 // Save todos to localStorage
 const saveTodos = (todos) => {
     localStorage.setItem('todos', JSON.stringify(todos))
+}
+
+// Remove todo by id
+const removeTodo = (id) => {
+    const todoIndex = todos.findIndex((todo) => todo.id === id)
+
+    if (todoIndex > -1) {
+        todos.splice(todoIndex, 1)
+    }
+}
+
+// Toggle the completed value for a given todo
+const toggleTodo = (id) => {
+    const todo = todos.find((todo) => todo.id === id)
+
+    if (todo) {
+        todo.completed = !todo.completed
+    }
 }
 
 // Render application todos based on filters
@@ -31,24 +51,6 @@ const renderTodos = (todos, filters) => {
     filteredTodos.forEach((todo) => {
         document.querySelector('#todos').appendChild(generateTodoDOM(todo))
     })
-}
-
-// Remove todos
-const removeTodo = (id) => {
-    const todoIndex = todos.findIndex((todo) => todo.id === id)
-
-    if (todoIndex > -1) {
-        todos.splice(todoIndex, 1)
-    }
-}
-
-//  Toggle the completed value for a given todo
-const toggleTodo = (id) => {
-    const todo = todos.find((todo) => todo.id === id)
-
-    if (todo) {
-        todo.completed = !todo.completed
-    }
 }
 
 // Get the DOM elements for an individual note
@@ -75,7 +77,7 @@ const generateTodoDOM = (todo) => {
     // Setup the remove button
     removeButton.textContent = 'x'
     todoEl.appendChild(removeButton)
-    removeButton.addEventListener('click', (e) => {
+    removeButton.addEventListener('click', () => {
         removeTodo(todo.id)
         saveTodos(todos)
         renderTodos(todos, filters)

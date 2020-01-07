@@ -1,36 +1,30 @@
-// === is complete equal
-// !== is not equal to
-// < Less than > More than
-// <= less than or equal to
-// >= more than or equal to
+// === - equality operator
+// !== - no equal opeartor
+// < - less than operator
+// > - greater than opeartor
+// <= - less than or equal to operator
+// >= - greater than or equal to opeartor
 
-let temp = 80
+let temp = 180
 
-//freezing
 if (temp <= 32) {
-    //console.log("it is freezing outside")
+    console.log('It is freezing outside!')
 }
 
-//boiling
 if (temp >= 110) {
-    //console.log("It is boiling outside")
+    console.log('It is way to hot outside!')
 }
 
-// challenge
+// Challenge area
 
+let age = 6
 
-let age = 65
-
-console.log("Your age is " + age)
-
+// If 7 or under print message about child pricing
 if (age <= 7) {
-    console.log("You Can Ride For free!")
+    console.log('You will get a child discount!')
 }
 
-if (age >=65) {
-    console.log("Here's 80% Off The Ticket Price")
+// If 65 or older print message about senior discount
+if (age >= 65) {
+    console.log('You will get a senior discount!')
 }
-
-// if 7 or under print message about child price
-
-// if 65 or older print senior discount

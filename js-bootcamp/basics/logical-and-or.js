@@ -1,31 +1,29 @@
-let temp = 60
+let temp = 55
 
+// Logical And Operator - True if both sides are true. False otherwise
+// Logical Or Opeartor - True if at least one side is true. False otherwise
 
-// Logical AND && - true if both sides are true / or false
-// Logical OR || - true if one side is true / or false
-
-
-if (temp >=60 && temp <=90) {
-    //console.log("It is pretty nice out.")
-} else if (temp <=0 || temp >=120) {
-    //console.log("Stay indoors, it's dangerous outside.")
+if (temp >= 60 && temp <= 90) {
+    console.log('It is pretty nice out')
+} else if (temp <= 0 || temp >= 120) {
+    console.log('Do not go outside')
 } else {
-    //console.log ("Meh, it's not bad.")
+    console.log('Eh. Do what you want')
 }
 
-// Challenge Area
+// Challenge area
 
-let isGuestOneVegan = true
+let isGuestOneVegan = false
 let isGuestTwoVegan = false
 
-// Are both Vegan - Only offer vegan dishes
-// At least one Vegan - Make sure to offer up some Vegan options
-// Esle, Offer anything on the menu
+// Are both vegan? Only offer up vegan dishes.
+// At least one vegan? Make sure to offer up some vegan options.
+// Else, Offer up anything on the menue
 
 if (isGuestOneVegan && isGuestTwoVegan) {
-    console.log("Only offer Vegan dishes.")
+    console.log('Only offer up vegan dishes.')
 } else if (isGuestOneVegan || isGuestTwoVegan) {
-    console.log("Make sure to offer up some Vegan options.")
+    console.log('Make sure to offer up some vegan options.')
 } else {
-    console.log("Offer anything on the menu.")
+    console.log('Offer up anything on the menu')
 }
