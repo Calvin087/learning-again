@@ -25,4 +25,13 @@ const me = new Person('Calvin', 'Torra', 32, ['teaching', 'biking'])
 console.log(me.getBio()) 
 
 const person2 = new Person('Clancy' , 'Turner', 51)
+
+me.getBio = function () {
+    return 'This is fake'
+}
+
+Person.prototype.getBio = function () {
+    return 'Testing Testing'
+}
+
 console.log(person2.getBio()) 
