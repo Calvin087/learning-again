@@ -1,37 +1,30 @@
-const Person = function (firstName, lastName, age, likes = []) {
-    this.firstName = firstName
-    this.lastName = lastName
-    this.age = age
-    this.likes = likes
 
-}
+class Person {
+    constructor(firstName, lastName, age, likes = []) {
+        this.firstName = firstName
+        this.lastName = lastName
+        this.age = age
+        this.likes = likes
+    }
+    getBio() {
+        let bio = `${this.firstName} is ${this.age}.`
 
-Person.prototype.getBio = function () {
-    let bio = `${this.firstName} is ${this.age}.`
+        this.likes.forEach((like) => {
+            bio += ` ${this.firstName} likes ${like}.`
+        })
+    
+        return bio  
+    }
 
-    this.likes.forEach((like) => {
-        bio += ` ${this.firstName} likes ${like}.`
-    })
-
-    return bio
-}
-
-Person.prototype.setName = function (fullName) {
-    const names = fullName.split(' ')
-    this.firstName = names[0]
+    setName(fullName) {
+        const names = fullName.split(' ')
+        this.firstName = names[0]
+        this.lastName = names[1]
+    }
 }
 
 const me = new Person('Calvin', 'Torra', 32, ['teaching', 'biking'])
 console.log(me.getBio()) 
 
 const person2 = new Person('Clancy' , 'Turner', 51)
-
-me.getBio = function () {
-    return 'This is fake'
-}
-
-Person.prototype.getBio = function () {
-    return 'Testing Testing'
-}
-
-console.log(person2.getBio()) 
+console.log(person2.getBio())
