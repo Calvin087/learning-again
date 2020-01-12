@@ -1,4 +1,3 @@
-
 class Person {
     constructor(firstName, lastName, age, likes = []) {
         this.firstName = firstName
@@ -21,6 +20,10 @@ class Person {
         this.firstName = names[0]
         this.lastName = names[1]
     }
+}
+
+class Employee extends Person {
+    
 }
 
 const me = new Person('Calvin', 'Torra', 32, ['teaching', 'biking'])
