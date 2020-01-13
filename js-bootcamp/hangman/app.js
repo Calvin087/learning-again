@@ -1,13 +1,30 @@
+// http
+
 const puzzleEl = document.querySelector('#puzzle')
 const guessesEl = document.querySelector('#guesses')
 const game1 = new Hangman('cat', 3)
 
-puzzleEl.textContent = game1.getPuzzle()
-guessesEl.textContent = game1.getStatusMessage()
+puzzleEl.textContent = game1.puzzle
+guessesEl.textContent = game1.statusMessage
 
 window.addEventListener('keypress', function (e) {
     const guess = String.fromCharCode(e.charCode)
     game1.makeGuess(guess)
-    puzzleEl.textContent = game1.getPuzzle()
-    guessesEl.textContent = game1.getStatusMessage()
+    puzzleEl.textContent = game1.puzzle
+    guessesEl.textContent = game1.statusMessage
 })
+
+// Asynchronous JavaScript
+// HTTP request HyperText Transfer Protocol **IMPORTANT**
+
+const request = new XMLHttpRequest()
+
+request.addEventListener('readystatechange', () => {
+    if(e.target.readyState === 4) {
+        const data = JSON.parse(e.target.responseText)
+        console.log(data)
+    }
+})
+
+request.open('GET', 'http://puzzle.mead.io/puzzle')
+request.send()
