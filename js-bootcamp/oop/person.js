@@ -23,11 +23,39 @@ class Person {
 }
 
 class Employee extends Person {
-    
+    constructor(firstName, lastName, age, position, likes) {
+        super(firstName, lastName, age, likes)
+        this.position = position
+    }
+    // ***If you're an employee, use this bio, if you're just a person, use the one above
+    getBio() { 
+        return `${this.firstName} ${this.lastName} is a ${this.position}.`
+    }
+    getYearsLeft() {
+        return 65 - this.age
+    }
 }
 
-const me = new Person('Calvin', 'Torra', 32, ['teaching', 'biking'])
-console.log(me.getBio()) 
+class Student extends Person {
+    constructor(firstName, lastName, age, grade, likes) {
+        super(firstName, lastName, age, likes)
+        this.grade = grade
+    }
+    updateGrade(change) {
+        this.grade += change
+    }
+    getBio() {
+        const status = this.grade >= 70 ? `passing` : `failing`
+        return `${this.firstName} is ${status} the class`
+    }
+}
 
-const person2 = new Person('Clancy' , 'Turner', 51)
-console.log(person2.getBio())
+const me = new Student('Calvin', 'Turner', 32, 70, [])
+console.log(me.getBio())
+me.updateGrade(-20)
+console.log(me.getBio())
+// const me = new Employee('Calvin', 'Torra', 32, 'Teacher', ['teaching', 'biking'])
+// console.log(me.getBio()) 
+
+// const person2 = new Person('Clancy' , 'Turner', 51)
+// console.log(person2.getBio())
