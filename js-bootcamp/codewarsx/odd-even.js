@@ -11,6 +11,9 @@ function oddOrEven(array) {
 
  console.log(oddOrEven([2, 2, 5]))
 
+ 
+
+
 //  function oddOrEven(array) {
 //     var result = 0;
 //     for (var i = 0; i < array.length; i++)

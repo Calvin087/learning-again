@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Investment Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+    <script type="text/javascript" src="invest-calc.js"></script>
+</head>
+<body>
+
+    <!-- Start of form -->
+    <div class="form"> 
+
+        <h1>Investment Calculator</h1>
+
+        <form id="resetForm">
+
+            <label>Amount of Interet (Principal)</label> 
+            <input type="text" id="principal" size = 10>
+            <br>
+            <br>
+            <label> Annual Rate (example 0.65)</label>
+            <input type="text" id="annualRate" size = 10>
+            <br>
+            <br>
+            <label>Number of years</label>
+            <input type="text" id="years" size = 10>
+            <br>
+            <br>
+            <label>Periods per year</label>
+            <input type="text" id="periodsPerYear" size = 10>
+            <br>
+            <br>
+        </form>
+
+        <button type="button" onclick="doFV()">Calculate future value</button>
+        </br>
+        </br>
+        <button type="button" onclick="reset()" value ="Reset Form">Reset Form</button>
+        </br>
+        </br>
+
+        <div class="output" id="outputDiv"></div>
+
+    </div>
+    
+</body>
+</html>
