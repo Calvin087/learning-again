@@ -15,7 +15,14 @@ window.addEventListener('keypress', function (e) {
 })
 
 
-getPuzzle function
+getPuzzle((error, puzzle) => {
+    if (error) {
+        console.log("Error: ${error}")
+    } else {
+        console.log(puzzle)
+    }
+})
+
 
 // Asynchronous JavaScript
 // HTTP request HyperText Transfer Protocol **IMPORTANT**
