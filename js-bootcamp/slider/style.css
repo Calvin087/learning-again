@@ -1,0 +1,71 @@
+:root {
+    --mainWhite: #f2fdff;
+    --mainBlue: #3e92cc;
+}
+.max-height {
+    min-height: 80vh;
+}
+body {
+    background: var(--mainWhite);
+}
+
+.container {
+    display: block;
+}
+
+.img-container {
+    min-height: 500px;
+    background: url("./img/70sJaz1.jpg");
+    background-size:cover;
+    border: 0.5rem solid var(--mainBlue);
+    border-radius: 0.5rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+@media screen and (min-width: 800px) {
+    .img-container {
+    min-height: 80vh;
+    max-width: 120vh;
+    }
+}
+
+.btn-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: var(--mainBlue);
+    color: var(--mainWhite) !important;
+    transform: translate(-50%, -50%);
+    border: 0.2rem solid var(--mainBlue);
+    font-size: 1.2rem;
+}
+.btn-left:hover {
+    border-color: var(--mainBlue);
+    background: var(--mainWhite);
+    color: var(--mainBlue) !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background: var(--mainBlue);
+    color: var(--mainWhite) !important;
+    font-size: 1.2rem;
+    transform: translate(50%, -50%);
+    border: 0.2rem solid var(--mainBlue);
+    
+}
+.btn-right:hover {
+    border-color: var(--mainBlue);
+    background: var(--mainWhite);
+    color: var(--mainBlue) !important;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn {
+    padding: 5px;
+    border-radius: 3px;
+}
