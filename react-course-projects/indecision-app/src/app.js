@@ -1,43 +1,66 @@
-console.log("App.js is running")
-
-let app = {
-    title: "Indecision App",
-    subtitle: "Put your life in the hands of a computer",
-    options: ['One, Two']
-}
-
-let template = (
-    <div>
-        <h1>{app.title}</h1>
-        {app.subtitle && <p>{app.subtitle}</p>}
-        <p>{app.options.length > 0 ? "Here are your options" : "No Options"}</p>
-        <ol>
-            <li>item one</li>
-            <li>item two</li>
-        </ol>
-    </div>
-)
-
-let user = {
-    name: "Calvin",
-    age: 32,
-    location: "Madrid"
-}
-
-function getLocation(location) {
-    if(location) {
-        return <p>Location: {location}</p>
+class IndecisionApp extends React.Component {
+    render() {
+        return (
+            <div>
+                <Header />
+                <Action />
+                <Options />
+                <AddOption />
+            </div>
+        )
     }
 }
 
-let templateTwo = (
-    <div>
-        <h1>{user.name ? user.name : "Anonymous"}</h1>
-        {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
-        {getLocation(user.location)}
-    </div>
-)
+class Header extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>Indecision</h1>
+                <h2>Put your life in the hands of a computer</h2>
+            </div>
+        )
+    }
+}
 
-let appRoot = document.getElementById('app')
+class Action extends React.Component {
+    render() {
+        return (
+            <div>
+                <button>What should i do?</button>
+            </div>
+        )
+    }
+}
 
-ReactDOM.render(template, appRoot)
+class Options extends React.Component {
+    render() {
+        return (
+            <div>
+                Options component here.
+                <Option />
+            </div>
+        )
+    }
+}
+
+class Option extends React.Component {
+    render() {
+        return (
+            <div>
+                Options Component here.
+            </div>
+        )
+    }
+}
+
+class AddOption extends React.Component {
+    render() {
+        return (
+            <div>
+                AddOption Component here
+            </div>
+        )
+    }
+}
+
+ReactDOM.render(<IndecisionApp />, document.getElementById('app'))
