@@ -1,6 +1,10 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+2020-01-28 20:21:32
+
+Look up #Prototypes and #Classes for #dummies explanation promises + promise chainging - Await + Async Functions
+
 ### 2020-01-13 19:24:55
 
 ```js
