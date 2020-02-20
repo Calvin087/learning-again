@@ -1,7 +1,11 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
-2020-01-28 20:21:32
+### 2020-02-20 23:12:39
+
+Haven't updated this in almost a month. The react course is kicking the shit out of me but I'm trying to following along. I've also started looking at P1xt's guide to becomming a solid developer. They've included a course on Math and Algebra which is also fucking me over, but it was a weak spot of mine anyway and needed to be addressed. 
+
+### 2020-01-28 20:21:32
 
 Look up #Prototypes and #Classes for #dummies explanation promises + promise chainging - Await + Async Functions
 
