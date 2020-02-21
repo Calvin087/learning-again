@@ -1,6 +1,10 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2020-02-21 20:40:24
+
+Algebra absolutely destroyed me, i'm a week and a half in and I still can't simplify fractions that are divided by other fractions etc. I know the general formula but each new puzzle is worse than the last. At least i've opened up a new wound and found a way to start patching it. Going to move on to the next level and get beaten even worse.
+
 ### 2020-02-20 23:12:39
 
 Haven't updated this in almost a month. The react course is kicking the shit out of me but I'm trying to following along. I've also started looking at P1xt's guide to becomming a solid developer. They've included a course on Math and Algebra which is also fucking me over, but it was a weak spot of mine anyway and needed to be addressed. 
