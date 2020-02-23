@@ -11,13 +11,10 @@ import './styles/styles.scss'
 
 const store = configureStrore()
 
-store.dispatch(addExpense({ description: 'Water' }))
-store.dispatch(addExpense({ description: 'Gas bill', amount: 300 }))
+store.dispatch(addExpense({ description: 'Water', amount: 4500 }))
+store.dispatch(addExpense({ description: 'Gas bill', amount: 300, createdAt: 1000 }))
+store.dispatch(addExpense({ description: 'Rent', amount: 1950 }))
 store.dispatch(setTextFilter('bill'))
-
-setTimeout(() => {
-    store.dispatch(setTextFilter('bill'))
-}, 3000)
 
 const state = store.getState()
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
