@@ -1,6 +1,10 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2020-03-01 14:35:21
+
+Well just started looking into JS drawing and animation. Didn't even know that it was possible to do that. Not so complicated. Reminds me of padding and margins in HTML. Drawing a lot of boring shapes, but accepting that these are the basics suggested by the platform. I imagine things will get complicated very quickly.
+
 ### 2020-02-21 20:40:24
 
 Algebra absolutely destroyed me, i'm a week and a half in and I still can't simplify fractions that are divided by other fractions etc. I know the general formula but each new puzzle is worse than the last. At least i've opened up a new wound and found a way to start patching it. Going to move on to the next level and get beaten even worse.
