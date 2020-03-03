@@ -1,6 +1,11 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2020-03-03 21:38:31
+Drawing pretty pictures with JS. Again, quite surprised that this was even a thing. I guess processJs must be the system behind it. I've left React alone for a while. It's driving me crazy and the course is boring as hell. Still working through P1Xt's stuff so we'll see how far i get when App Academy io has been started. That includes rails etc.
+
+Khan Acaademy is my current course. Will return to react once I've gotten some App IO done. It might help my understanding of data flow etc through programming principles.
+
 ### 2020-03-01 14:35:21
 
 Well just started looking into JS drawing and animation. Didn't even know that it was possible to do that. Not so complicated. Reminds me of padding and margins in HTML. Drawing a lot of boring shapes, but accepting that these are the basics suggested by the platform. I imagine things will get complicated very quickly.
