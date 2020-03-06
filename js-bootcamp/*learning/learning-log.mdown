@@ -1,6 +1,50 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2020-03-06 12:11:18
+
+Khan Academy is messing me up with the basics all over again. but this is good. It's reminding me where my holes are in my knowledge. I thought I understood things while following courses, but obviously not.
+
+```js
+var book = [
+    {
+        title: "The Giver",
+        stars: 4,
+        author: "Your mum"
+    },
+    {
+        title: "Book Two",
+        stars: 3,
+        author: "Your mum"
+    },
+    {
+        title: "The Book",
+        stars: 5,
+        author: "Your mum"
+    }
+];
+
+// draw shelf
+fill(173, 117, 33);
+rect(0, 120, width, 10);
+
+// draw one book
+
+for(var i = 0; i < book.length; i++) {
+    fill(214, 255, 219);
+    rect(10 + i* 120, 20, 90, 100);
+    
+    fill(0, 0, 0);
+    
+    text(book[i].title, 20 + i* 120, 29, 70, 100);
+    text(book[i].author, 20 + i * 120, 49, 70, 100);
+    
+    for (var j = 0; j < book[i].stars; j++) {
+    image(getImage("cute/Star"), 15 + i * 120 + j *15, 90, 20, 30); // Having to add multiple numbers to a single X position fucked me up in more ways than one. I still don't fully understand the reason why it's happening but now I know where to look for similar problems.
+        }
+}
+```
+
 ### 2020-03-03 21:38:31
 Drawing pretty pictures with JS. Again, quite surprised that this was even a thing. I guess processJs must be the system behind it. I've left React alone for a while. It's driving me crazy and the course is boring as hell. Still working through P1Xt's stuff so we'll see how far i get when App Academy io has been started. That includes rails etc.
 
