@@ -1,6 +1,10 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+### 2020-03-08 14:45:37
+
+Today fininshed the HTML & CSS classes suggested for the pre programming prep on Khan academy. No doubt once I get involved with the App Ac io projects i'll be getting my ass handed to me. This one took about a week of lunch time studying and after work studying. Around 6 hours if I take away the distractions.
+
 ### 2020-03-06 12:11:18
 
 Khan Academy is messing me up with the basics all over again. but this is good. It's reminding me where my holes are in my knowledge. I thought I understood things while following courses, but obviously not.
