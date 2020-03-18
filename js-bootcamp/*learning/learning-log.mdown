@@ -1,6 +1,8 @@
 https://www.markdownguide.org/extended-syntax/
 List of syntax for MD files.
 
+Today i realised that i can't download my github stuff because there is a star inside the folder name. So i've just been working offline to continue with my journey. Finally finished the drawing section of the Javascript for Khan academy. CoronaVirus has everyone locked in their house but I have to continue working - making calls to IT managers that are in panic mode for the virus. We'll see what happens.
+
 ### 2020-03-10 20:03:01
 
 Well SQL was pretty boring. Doesn't seem too difficult. Probably would need a lot of referrencing in order to get things right, but it's not something that I intend to memorize or master to be honest. Not unless I really see something job wise that requires high knowledge on it.
