@@ -12,6 +12,10 @@ module.exports = {
             test: /\.js$/,
             exclude: /node_modules/
     }]
+    },
+    devtool: 'cheap-module-eval-source-map', // packge that shows me the exact path to errors, not babel files, but mine.
+    devServer: {
+        contentBase: path.join(__dirname, 'public')
     }
 };
 
