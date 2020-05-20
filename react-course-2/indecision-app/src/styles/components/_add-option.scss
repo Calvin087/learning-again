@@ -7,6 +7,7 @@
 
 .add-option {
     display: flex;
+    flex-direction: column;
     padding: $m-size;
 }
 
@@ -17,4 +18,10 @@
     border: none;
     border-bottom: .3rem solid darken($dark-blue, 10%);
     padding: $s-size;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .add-option {
+        flex-direction: row;
+    }
 }
