@@ -1,9 +1,9 @@
 import { createStore, combineReducers } from 'redux'
 import uuid from 'uuid'
 
-const addExpense = (
+const addExpense = ( // This is being added each time, i confuse expenses with expense, expenses no longer exists.
     {
-        description = '', // Destructuring user inputs
+        description = '', // Destructuring user inputs and setting defaults
         note = '',
         amount = 0,
         createdAt = 0 
@@ -28,6 +28,11 @@ const expenseReducer = (state = expenseReducerDefaultState, action) => {
                 ...state,
                 action.expense
             ]
+        case 'REMOVE_EXPENSE':
+            return state.filter(({ id }) => {
+                return id !== action.id
+            })
+
         default:
             return state
     }
@@ -64,31 +69,5 @@ const expenseOne = store.dispatch(addExpense({ description: 'Rent', amount: 100 
 const expenseTwo = store.dispatch(addExpense({ description: 'Coffee', amount: 300 }))
 
 
--------------
+store.dispatch(removeExpense({ id: expenseOne.expense.id}))
 
-
-store.dispatch(removeExpense({ id: expenseOne.expense.id }))
-
-
-
-handleDeleteSingleOption = (optionToRemove) => {
-    this.setState((prevState) => ({
-        options: prevState.options.filter((option) => optionToRemove !== option)
-    }))
-}
-
-// const demoState = {
-//     expenses: [{
-//         id: 'vgbhn',
-//         description: 'Jan Rent',
-//         note: 'This was the final payment for the house',
-//         amount: 75000,
-//         createdAt: 0
-//     }],
-//     filters: {
-//         text: 'rent',
-//         sortBy: 'amount',
-//         startDate: undefined,
-//         endDate: undefined
-//     }
-// }
