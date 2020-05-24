@@ -124,20 +124,22 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
     }
 }
 
-// TimeStamps
-
-// Visible Expenses
-
 const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
 // inside sort.subscribe, i have a const which points to getVisibleExpenses
 // inside visible i'm calling the function here and passing both reducers.
 // I'm now receiving two reducers and destructuring them as arguments.
-    return expenses.filter(() => {
-        const startDateMatch
-        const endDateMatch
-        const textMatch
+    return expenses.filter((expense) => {
+        const startDateMatch = typeof startDate !== 'number' || expense.createdAt >= startDate
+        const endDateMatch = typeof endDate !== 'number' || expense.createdAt <= endDate
+        const textMatch = expense.description.toLowerCase().includes(text.toLowerCase())
 
         return startDateMatch && endDateMatch && textMatch
+    }).sort((a, b) => {
+        if(sortBy === 'date') {
+            return a.createdAt < b.createdAt ? 1 : -1
+        } else if (sortBy === 'amount') {
+            return a.createdAt < b.createdAt ? 1 : -1
+        }
     })
 }
 
@@ -156,8 +158,8 @@ store.subscribe(() => {
     console.log(visibleExpenses)
 })
 
-const expenseOne = store.dispatch(addExpense({ description: 'Rent', amount: 100 }))
-const expenseTwo = store.dispatch(addExpense({ description: 'Coffee', amount: 300, note: "Call to edit" }))
+const expenseOne = store.dispatch(addExpense({ description: 'Rent', amount: 100, createdAt: -21000 }))
+const expenseTwo = store.dispatch(addExpense({ description: 'Coffee', amount: 300, note: "Call to edit", createdAt: -1000 }))
 
 
 
@@ -165,8 +167,9 @@ const expenseTwo = store.dispatch(addExpense({ description: 'Coffee', amount: 30
 // store.dispatch(editExpense(expenseTwo.expense.id, { amount: 3000 }))
 // store.dispatch(setTextFilter('Car'))
 
-// store.dispatch(sortByAmount())
+store.dispatch(sortByAmount())
 // // store.dispatch(sortByDate())
-// store.dispatch(setStartDate(125))
+// store.dispatch(setStartDate(0))
+// store.dispatch(setTextFilter("coffee"))
 // store.dispatch(setStartDate())
 // store.dispatch(setEndDate(1250))
