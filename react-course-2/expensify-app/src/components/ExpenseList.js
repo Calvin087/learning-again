@@ -4,7 +4,6 @@ import ExpenseListItem from './ExpenseListItem'
 import selectExpenses from '../selectors/expenses'
 
 const ExpenseList = (props) => ( // This component can now access the store as a prop
-    
     <div>
     <h1>Expense List</h1>
     {props.expenses.map((expense) => {
