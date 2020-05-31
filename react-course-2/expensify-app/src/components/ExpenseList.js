@@ -3,12 +3,19 @@ import { connect } from 'react-redux'
 import ExpenseListItem from './ExpenseListItem'
 import selectExpenses from '../selectors/expenses'
 
-const ExpenseList = (props) => ( // This component can now access the store as a prop
+export const ExpenseList = (props) => ( // This component can now access the store as a prop
+    // Exporting this twice because the one above
+    // is being used in the test area while being unconnected
     <div>
-    <h1>Expense List</h1>
-    {props.expenses.map((expense) => {
-        return <ExpenseListItem key={expense.id} {...expense}/>
-    })}
+    {
+        props.expenses.length === 0 ? (
+            <p>No Expenses</p>     
+    ) : (
+        props.expenses.map((expense) => {
+          return <ExpenseListItem key={expense.id} {...expense} />
+        })
+    )
+}
     </div>
 
 )
