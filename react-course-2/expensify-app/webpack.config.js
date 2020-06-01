@@ -1,17 +1,14 @@
-const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = (env) => {
-    const isProduction = env === 'production'
-    // aparently this is going to make it possible
-    // to choose between production and dev builds. We'll see.
-    // line devtool:
-    const CSSExtract = new ExtractTextPlugin('styles.css')
+    const isProduction = env === 'production';
+    const CSSExtract = new ExtractTextPlugin('styles.css');
 
     return {
         entry: './src/app.js',
         output: {
-            path: path.join(__dirname, 'public'),
+            path: path.join(__dirname, 'public', 'dist'),
             filename: 'bundle.js'
         },
         module: {
@@ -46,6 +43,7 @@ module.exports = (env) => {
         devServer: {
             contentBase: path.join(__dirname, 'public'),
             historyApiFallback: true,
+            publicPath: '/dist/'
         }
     };
-}
+};
