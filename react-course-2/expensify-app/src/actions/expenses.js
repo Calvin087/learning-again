@@ -15,9 +15,9 @@ export const startAddExpense = (expenseData = {}) => {
                 createdAt = 0
         } = expenseData
         
-        const expense = { description, note, amount, createdAt }
+        const expense = { description, note, amount, createdAt } // setting defaults for object
         
-        database.ref('expenses').push(expense).then((ref) => {
+        database.ref('expenses').push(expense).then((ref) => { // pushing to database
             dispatch(addExpense({
                 id: ref.key,
                 ...expense
@@ -31,11 +31,27 @@ export const removeExpense = ({ id } = {}) => ({
     id
 })
 
+export const startRemoveExpense = ({ id } = {}) => {
+    return (dispatch) => { // dispatch gets passed from redux lib
+        return database.ref(`expenses/${id}`).remove().then(() => { // return promise, then remove from database
+            dispatch(removeExpense({ id })) // once done, remove from redux STORE
+        })
+    }
+}
+
 export const editExpense = (id, updates) => ({
     type: 'EDIT_EXPENSE',
     id,
     updates
-})
+}) 
+
+export const startEditExpense = (id, updates) => {
+    return (dispatch) => {
+        return database.ref(`expenses/${id}`).update(updates).then(() => {
+            dispatch(editExpense(id, updates))
+        })
+    }
+}
 
 // set expenses
 
@@ -45,6 +61,7 @@ export const setExpenses = (expenses) => ({
 })
 
 // SOMETHING THAT NEEDS TO BE LEARNED
+// connecting REDUX To a database, api calls etc.
 
 export const startSetExpenses = () => { // fetching and parsing data.
     return (dispatch) => {
