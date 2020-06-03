@@ -36,3 +36,30 @@ export const editExpense = (id, updates) => ({
     id,
     updates
 })
+
+// set expenses
+
+export const setExpenses = (expenses) => ({
+    type: 'SET_EXPENSES',
+    expenses
+})
+
+// SOMETHING THAT NEEDS TO BE LEARNED
+
+export const startSetExpenses = () => { // fetching and parsing data.
+    return (dispatch) => {
+        return database.ref('expenses') // calling the database coloum
+            .once('value') // one time
+            .then((snapshot) => { // then taking the snapshot received
+                const expenses = [] // creating an array to fill later
+
+                snapshot.forEach((childSnapshot) => { // looping over returned data
+                    expenses.push({ // filling the premade array with
+                        id: childSnapshot.key, // the keys returned by Firebase
+                        ...childSnapshot.val() // spreading all the data inside those database keys
+                    })
+                })
+                dispatch(setExpenses(expenses))
+            })
+    }
+}
