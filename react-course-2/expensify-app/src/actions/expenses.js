@@ -1,22 +1,30 @@
 import uuid from 'uuid'
+import database from '../firebase/firebase'
 
-export const addExpense = ( // This is being added each time, i confuse expenses with expense, expenses no longer exists.
-    {
-        description = '', // Destructuring user inputs and setting defaults
-        note = '',
-        amount = 0,
-        createdAt = 0
-    } = {}
-) => ({ // Then attach them to the object
+export const addExpense = (expense) => ({ // Then attach them to the object
     type: 'ADD_EXPENSE',
-    expense: {
-        id: uuid(),
-        description,
-        note,
-        amount,
-        createdAt
-    }
+    expense
 })
+
+export const startAddExpense = (expenseData = {}) => {
+    return (dispatch) => { // dispatch object only works because of THUNK
+        const {
+                description = '', // Destructuring user inputs and setting defaults
+                note = '',
+                amount = 0,
+                createdAt = 0
+        } = expenseData
+        
+        const expense = { description, note, amount, createdAt }
+        
+        database.ref('expenses').push(expense).then((ref) => {
+            dispatch(addExpense({
+                id: ref.key,
+                ...expense
+            }))
+        })
+    }
+}
 
 export const removeExpense = ({ id } = {}) => ({
     type: 'REMOVE_EXPENSE',

@@ -1,3 +1,52 @@
+// Child Removed
+database.ref('expenses').on('child_removed', (snapshot) => {
+    console.log(snapshot.key, snapshot.val())
+})
+
+// Child Changed
+database.ref('expenses').on('child_changed', (snapshot) => {
+    console.log(snapshot.key, snapshot.val())
+}) 
+
+// Child Added
+database.ref('expenses').on('child_added', (snapshot) => {
+    console.log(snapshot.key, snapshot.val())
+}) 
+
+database.ref('expenses')
+    .once('value')
+    .then((snapshot) => {
+        const expenses = []
+
+        snapshot.forEach((childSnapshot) => {
+            expenses.push({
+                id: childSnapshot.key,
+                ...childSnapshot.val()
+            }) 
+        })
+    console.log(expenses)
+})
+
+database.ref('expenses')
+    .on('value', (snapshot) => {
+        const expenses = []
+
+        snapshot.forEach((childSnapshot) => {
+            expenses.push({
+                id: childSnapshot.key,
+                ...childSnapshot.val()
+            })
+        })
+        console.log(expenses)
+})
+
+database.ref('expenses').push({
+    description: 'Food',
+    note: '',
+    amount: 1200,
+    createdAt: 18986900
+})
+
 database.ref('expenses').push({ // sends a new item to the database each time it's called, even with the same data
     title: 'Rent',
     amount: 750,
