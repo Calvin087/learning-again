@@ -7,7 +7,8 @@ export const addExpense = (expense) => ({ // Then attach them to the object
 })
 
 export const startAddExpense = (expenseData = {}) => {
-    return (dispatch) => { // dispatch object only works because of THUNK
+    return (dispatch, getState) => { // dispatch object only works because of THUNK
+        const uid = getState().auth.uid
         const {
                 description = '', // Destructuring user inputs and setting defaults
                 note = '',
@@ -17,7 +18,7 @@ export const startAddExpense = (expenseData = {}) => {
         
         const expense = { description, note, amount, createdAt } // setting defaults for object
         
-        database.ref('expenses').push(expense).then((ref) => { // pushing to database
+        return database.ref(`users/${uid}/expenses`).push(expense).then((ref) => { // pushing to database
             dispatch(addExpense({
                 id: ref.key,
                 ...expense
@@ -32,8 +33,9 @@ export const removeExpense = ({ id } = {}) => ({
 })
 
 export const startRemoveExpense = ({ id } = {}) => {
-    return (dispatch) => { // dispatch gets passed from redux lib
-        return database.ref(`expenses/${id}`).remove().then(() => { // return promise, then remove from database
+    return (dispatch, getState) => { // dispatch gets passed from redux lib
+        const uid = getState().auth.uid
+        return database.ref(`users/${uid}/expenses/${id}`).remove().then(() => { // return promise, then remove from database
             dispatch(removeExpense({ id })) // once done, remove from redux STORE
         })
     }
@@ -46,8 +48,9 @@ export const editExpense = (id, updates) => ({
 }) 
 
 export const startEditExpense = (id, updates) => {
-    return (dispatch) => {
-        return database.ref(`expenses/${id}`).update(updates).then(() => {
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid
+        return database.ref(`users/${uid}/expenses/${id}`).update(updates).then(() => {
             dispatch(editExpense(id, updates))
         })
     }
@@ -64,8 +67,10 @@ export const setExpenses = (expenses) => ({
 // connecting REDUX To a database, api calls etc.
 
 export const startSetExpenses = () => { // fetching and parsing data.
-    return (dispatch) => {
-        return database.ref('expenses') // calling the database coloum
+    return (dispatch, getState) => {
+        const uid = getState().auth.uid
+
+        return database.ref(`users/${uid}/expenses`) // calling the database coloum
             .once('value') // one time
             .then((snapshot) => { // then taking the snapshot received
                 const expenses = [] // creating an array to fill later
