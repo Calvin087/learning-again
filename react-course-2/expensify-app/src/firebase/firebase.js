@@ -1,6 +1,9 @@
 import * as firebase from 'firebase'
 import moment from 'moment'
 
+//  Authentication using a provider 
+
+
 // Grabs all the named exports and can now use them as firebase.something
 
 // Firebase can not handle Arrays, looks like we'll need to use objects of objects.
@@ -18,5 +21,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database()
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
 
-export { firebase, database as default }
+export { firebase, googleAuthProvider, database as default }
