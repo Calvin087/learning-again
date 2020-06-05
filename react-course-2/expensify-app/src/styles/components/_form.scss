@@ -1,0 +1,16 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    > * { // this selects all children in the .form apparently
+        margin-bottom: $m-size;
+    }
+}
+
+.form__error {
+    margin: 0 0 $m-size 0;
+    font-style: italic;
+}
+
+.button--secondary {
+    background: #888;
+}

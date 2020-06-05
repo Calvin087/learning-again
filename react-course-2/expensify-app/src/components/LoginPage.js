@@ -3,8 +3,12 @@ import { connect } from 'react-redux'
 import { startLogin } from '../actions/auth'
 
 export const LoginPage = ({startLogin}) => ( // Stateless function with startlogin passed in as a prop
-    <div>
-    <button onClick={startLogin}>Log In</button>
+    <div className="box-layout">
+        <div className="box-layout__box">
+            <h1 className="box-layou__title">Expensis</h1>
+            <p>Something about the app</p>
+            <button className="button" onClick={startLogin}>Log in with Google</button>
+        </div>
     </div>
 )
 

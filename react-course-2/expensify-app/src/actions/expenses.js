@@ -45,7 +45,7 @@ export const editExpense = (id, updates) => ({
     type: 'EDIT_EXPENSE',
     id,
     updates
-}) 
+})
 
 export const startEditExpense = (id, updates) => {
     return (dispatch, getState) => {
