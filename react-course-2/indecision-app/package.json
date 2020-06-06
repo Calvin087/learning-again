@@ -1,5 +1,6 @@
 {
   "name": "indecision-app",
+  "homepage": "https://lockdown-decision.web.app/",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Calvin A Turner",
