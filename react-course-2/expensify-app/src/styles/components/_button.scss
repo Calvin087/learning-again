@@ -10,6 +10,12 @@
     text-decoration: none;
 }
 
+.button__git {
+    @extend .button;
+    background: #444444;
+    margin-top: 10px;
+}
+
 .button--link {
     background: none;
 }
