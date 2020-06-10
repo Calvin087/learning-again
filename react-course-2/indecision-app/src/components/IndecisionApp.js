@@ -61,7 +61,7 @@ class IndecisionApp extends React.Component {
 
     render() {
 
-        const subtitle = "Let's decide for you"
+        const subtitle = "Not sure what to do? Let me decide for you!"
 
 
         return (
