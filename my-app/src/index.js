@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import ReactDOM from 'react-dom';
+import Test from './components/test'
 import * as serviceWorker from './serviceWorker';
 
 const notesReducer = (state, action) => {
