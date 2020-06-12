@@ -14,10 +14,14 @@ const useStyles = makeStyles({
     },
 });
 
+
 function ImgMediaCard(props) {
     const classes = useStyles();
+    const baseMap = "https://www.google.com/maps/place/" + props.street + ", " + props.city + ", " + props.country
 
     return (
+
+
         <div className="item">
             <Card className={classes.root}>
                 <CardActionArea>
@@ -41,7 +45,7 @@ function ImgMediaCard(props) {
                         </Typography>
                         
                         <Typography className="addy" variant="body2" color="textSecondary" component="p">
-                            <i class="fas fa-map-marked-alt"></i><a href="http:www.google.com">{props.street}, {props.city}, {props.country}</a>
+                            <i class="fas fa-map-marked-alt"></i><a href={baseMap} target="_blank">{props.street}, {props.city}, {props.country}</a>
                         </Typography>
 
                         <Typography className="phone" variant="body2" color="textSecondary" component="p">
