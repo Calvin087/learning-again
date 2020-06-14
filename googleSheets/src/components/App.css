@@ -16,6 +16,21 @@ h2 {
     /* margin: 0 auto; */
 }
 
+.top-bar {
+    background-color: #5e4238;
+    padding: 5px;
+}
+
+.top-bar__content {
+    color: white;
+    text-align: center;
+}
+
+.top-bar__content a {
+    color: #be9c91;
+    font-weight: bold;
+}
+
 header {
     background-image: url('../images/bgimagefam.jpg');
     background-repeat: no-repeat;
@@ -54,7 +69,8 @@ header {
 }
 
 .card-container {
-    max-width: 100vw;
+    width: 100vw;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -98,7 +114,7 @@ header {
 }
 
 .footer {
-    background-color: black;
+    background-color: #5e4238;
     color: white;
     padding: 15px;
     text-align: center;
@@ -108,7 +124,8 @@ header {
 }
 
 .footer a {
-    color: #996436;
+    color: #be9c91;
+    font-weight: bold;
 }
 
 .loadingImage {
@@ -138,4 +155,18 @@ header {
     width: 80%;
     height: 60%;
   }
+
+  .jss1 {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .top-bar__content {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+select {
+    margin-right: 10px;
 }

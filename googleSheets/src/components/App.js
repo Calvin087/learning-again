@@ -10,11 +10,15 @@ class App extends Component {
         super()
         this.state = {
             data: [],
-            selction: undefined,
+            categories: undefined,
+            city: undefined,
+            country: undefined,
             pinkLoad: true
         }
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleChangeCountry = this.handleChangeCountry.bind(this);
+        this.handleChangeCity = this.handleChangeCity.bind(this);
+        this.handleChangeCategories = this.handleChangeCategories.bind(this);
 
     }
 
@@ -24,7 +28,9 @@ class App extends Component {
             callback: googleData => {
                 this.setState({
                     data: googleData,
-                    selection: 'all',
+                    categories: 'all',
+                    city: "Madrid",
+                    country: "España",
                     pinkLoad: false
                 })
             },
@@ -32,74 +38,100 @@ class App extends Component {
         })
     }
 
-    handleChange(e) {
-        this.setState({ selection: e.target.value });
+    handleChangeCountry(e) {
+        this.setState({ country: e.target.value });
     }
 
-    // const filteredData = data.filter(item => item.categories === this.state.selection)
+    handleChangeCity(e) {
+        this.setState({ city: e.target.value });
+    }
+
+    handleChangeCategories(e) {
+        this.setState({ categories: e.target.value });
+    }
 
     render() {
-        const { data } = this.state
-        const filteredData = data.filter(item => item.categories.includes(this.state.selection))
-
+        const { data, categories, city, country} = this.state
+        
+        const filteredData = data.filter(item => item.categories.includes(categories) && item.city.includes(city) && item.country.includes(country))
+        
         return (
 
             <div>
             <div className="main-container">
 
+                <div className="top-bar">
+                        <p className="top-bar__content">We need your help to expand to more countries. Suggest a black owned business <a href="https://forms.gle/Z7Gh48YXqz2cK5iCA" target="_blank" >Here</a></p>
+                </div>
+
                 <header className="App-header">
                     <div className="header-content">
                         <h1 className="page-title">✊🏾 Local Black Business</h1>
-                        <p className="page-title__sub">From restaurants to health and wellness. Find what you need below and contribute to the black economy</p>
+                        <p className="page-title__sub">From restaurants to urban orchards. Find what you need below and support the black economy</p>
                     </div>  
                 </header>
 
                 <div className="select-nav">
-                    <select value={this.state.selection} onChange={this.handleChange}>
-                    <option value="" disabled selected>Business Type</option>
-                    <option value="all">All</option>
-                    <option value="art">Art</option>
-                    <option value="hair & beauty">Hair & Beauty</option>
-                    <option value="bar">Drink</option>
-                    <option value="restaurant">Food</option>
-                    <option value="fruit & veg">Fruit & Veg</option>
-                    <option value="shopping">Shopping</option>
+                    <select value={country} onChange={this.handleChangeCountry}>
+                        <option value="" disabled selected>Country</option>
+                        <option value="España">España</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                    </select>
+
+                    <select value={city} onChange={this.handleChangeCity}>
+                        <option value="" disabled selected>City</option>
+                        <option value="Madrid">Madrid</option>
+                        <option value="London">London</option>
+                    </select>
+
+                    <select value={categories} onChange={this.handleChangeCategories}>
+                        <option value="" disabled selected>City</option>
+                        <option value="all">All</option>
+                        <option value="art">Art</option>
+                        <option value="hair & beauty">Hair & Beauty</option>
+                        <option value="bar">Drink</option>
+                        <option value="restaurant">Food</option>
+                        <option value="fruit & veg">Fruit & Veg</option>
+                        <option value="shopping">Shopping</option>
                     </select>
                 </div>
 
 
-                <div className="card-container">
+                    <div className="card-container">
 
 
-                    {this.state.pinkLoad === true ? <img className="loadingImage" src={loadingPinkImg} /> : null}
-                
-                    {filteredData.map(item => {
-                        return (
-                            <div key={item.key}>
+                        {this.state.pinkLoad === true ? <img className="loadingImage" src={loadingPinkImg} /> : null}
+                    
+                        {filteredData.map(item => {
+                            return (
+                                <div key={item.key}>
 
 
-                                <CardComponent
-                                    bizName={item.bizName}
-                                    website={item.website}
-                                    description={item.description}
-                                    street={item.street}
-                                    city={item.city}
-                                    country={item.country}
-                                    phone={item.phone}
-                                    times={item.openingTimes}
-                                    categories={item.categories}
-                                    heroImg={item.heroImg}
-                                />
+                                    <CardComponent
+                                        bizName={item.bizName}
+                                        website={item.website}
+                                        description={item.description}
+                                        street={item.street}
+                                        city={item.city}
+                                        country={item.country}
+                                        phone={item.phone}
+                                        times={item.openingTimes}
+                                        categories={item.categories}
+                                        heroImg={item.heroImg}
+                                    />
 
-                            </div>
-                        )
-                    })
-                    }
+                                </div>
+                            )
+                        })
+                        }
+                    </div>
+
+            </div>
+
+                <div className="footer">
+                    👨🏾‍💻 A Work In Progress - Built with 🖤 by <a href="https://www.calvintorra.com" target="_blank" >Calvin Torra</a>
                 </div>
 
-                </div>
-
-                <div className="footer">👨🏾‍💻 Made by <a href="https://www.calvintorra.com" target="_blank" >Calvin Torra</a> - With the long lasting future in mind</div>
         </div>
 
         );
