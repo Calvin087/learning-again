@@ -49,7 +49,7 @@ class App extends Component {
 
                 <header className="App-header">
                     <div className="header-content">
-                        <h1 className="page-title">✊🏾 Support Black Business</h1>
+                        <h1 className="page-title">✊🏾 Local Black Business</h1>
                         <p className="page-title__sub">From restaurants to health and wellness. Find what you need below and contribute to the black economy</p>
                     </div>  
                 </header>

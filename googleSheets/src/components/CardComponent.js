@@ -17,7 +17,7 @@ const useStyles = makeStyles({
 
 function ImgMediaCard(props) {
     const classes = useStyles();
-    const baseMap = "https://www.google.com/maps/place/" + props.street + ", " + props.city + ", " + props.country
+    const baseMap = "https://www.google.com/maps/place/" + props.bizName + ", " + props.street + ", " + props.city + ", " + props.country
 
     return (
 

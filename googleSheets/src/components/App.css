@@ -115,3 +115,27 @@ header {
     width: 20vw;
     height: 20vh;
 }
+
+@media only screen and (max-width: 45rem) {
+  .makeStyles-root-1 {
+      /* max-width: 95% !important; */
+  }
+
+  .header-content {
+    margin: 0 auto;
+    position: absolute;
+    width: 80%;
+    top: 20%;
+    left: 10%;
+  }
+
+  .makeStyles-root-1 {
+    max-width: 100% !important;
+    margin: 15px;
+  }
+
+  .loadingImage {
+    width: 80%;
+    height: 60%;
+  }
+}
