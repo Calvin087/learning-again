@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabletop from 'tabletop'
 import CardComponent from './CardComponent'
-import loadingPinkImg from '../images/pink-run.gif'
+import loadingImg from '../images/curveLoad.gif'
 import './App.css'
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
             categories: undefined,
             city: undefined,
             country: undefined,
-            pinkLoad: true
+            imgLoad: true
         }
 
         this.handleChangeCountry = this.handleChangeCountry.bind(this);
@@ -31,7 +31,7 @@ class App extends Component {
                     categories: 'all',
                     city: "Madrid",
                     country: "España",
-                    pinkLoad: false
+                    imgLoad: false
                 })
             },
             simpleSheet: true,
@@ -61,13 +61,13 @@ class App extends Component {
             <div className="main-container">
 
                 <div className="top-bar">
-                        <p className="top-bar__content">We need your help to expand to more countries. Suggest a black owned business <a href="https://forms.gle/Z7Gh48YXqz2cK5iCA" target="_blank" >Here</a></p>
+                        <p className="top-bar__content">We need your help to expand to more countries. Suggest a business <a href="https://forms.gle/Z7Gh48YXqz2cK5iCA" target="_blank" >Here</a></p>
                 </div>
 
-                <header className="App-header">
+                <header>
                     <div className="header-content">
                         <h1 className="page-title">✊🏾 Local Black Business</h1>
-                        <p className="page-title__sub">From restaurants to urban orchards. Find what you need below and support the black economy</p>
+                        <p className="page-title__sub">From restaurants to urban orchards. Find what you need below and continue to support the black economy.</p>
                     </div>  
                 </header>
 
@@ -100,7 +100,7 @@ class App extends Component {
                     <div className="card-container">
 
 
-                        {this.state.pinkLoad === true ? <img className="loadingImage" src={loadingPinkImg} /> : null}
+                        {this.state.imgLoad === true ? <img className="loadingImage" src={loadingImg} /> : null}
                     
                         {filteredData.map(item => {
                             return (
