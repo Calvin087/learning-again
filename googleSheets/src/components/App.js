@@ -39,7 +39,17 @@ class App extends Component {
     }
 
     handleChangeCountry(e) {
-        this.setState({ country: e.target.value });
+        const countryChoice = e.target.value
+
+        switch (countryChoice) {
+            case "United Kingdom":
+                this.setState({ city: "London"})
+                break
+            case "España":
+                this.setState({ city: "Madrid" })
+                break
+        }
+        this.setState({ country: countryChoice });
     }
 
     handleChangeCity(e) {
