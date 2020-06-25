@@ -1,13 +1,13 @@
 const express = require("express")
 const app = express() // This creates a new Express server.
-
-const users = require("./routes/api/users")
-const tweets = require("./routes/api/tweets");
-const bodyParser = require("body-parser");
-
-const db = require('./config/keys').mongoURI;
 const mongoose = require("mongoose");
 // details from mongo database setup
+const db = require('./config/keys').mongoURI;
+const users = require("./routes/api/users")
+const tweets = require("./routes/api/tweets");
+const User = require('./models/User')
+
+const bodyParser = require("body-parser");
 
 mongoose
   .connect(db, { useNewUrlParser: true })
@@ -15,7 +15,16 @@ mongoose
   .catch((err) => console.log(err));
 // connect to MongoDB using mongoose
 
-app.get("/", (req, res) => res.send("Hello Dave"));
+app.get("/", (req, res) => {
+  const user = new User({
+    handle: "Jim",
+    email: "jim@sliame.com",
+    password: "Morrin"
+  })
+  user.save()
+  res.send("Hello Dave");
+})
+
 //basic route so that we can render some information on our page
 app.use("/api/users", users);
 app.use("/api/tweets", tweets)
