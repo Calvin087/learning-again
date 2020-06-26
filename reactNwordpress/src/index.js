@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Posts from './components/Posts'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import PostList from './components/PostList'
+import SinglePost from './components/SinglePost'
 import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <Posts />
+    <AppRouter />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
