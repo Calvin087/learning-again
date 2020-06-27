@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 html {
@@ -13,6 +14,32 @@ body {
     font-size: 2rem;
     line-height: 3.4rem;
     margin: 0 auto;
+}
+
+.wrap { 
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.blog-body {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.blog-body-item {
+    font-family: 'Inter', sans-serif;
+    width: 320px;
+    height: 200px;
+    margin: 10px 10px 70px 10px;
+    line-height: 2.5rem;
+    
+}
+
+.blog-body-item-img {
+    width: 100%;
+    align-content: center;
 }
 
 .blog-post {
