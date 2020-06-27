@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import PostList from './components/PostList'
-import SinglePost from './components/SinglePost'
+import { BrowserRouter as Router, Route, Link, BrowserRouter } from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
+import AppRouter from './Routers/AppRouter'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppRouter />
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );

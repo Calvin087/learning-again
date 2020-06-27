@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function PostList() {
+function Blog() {
     const [ posts, setPosts ] = useState([])
     const siteURL = "http://calvint1.sg-host.com/wp-json/wp/v2/books?_embed"
     
@@ -22,7 +22,7 @@ function PostList() {
     return (
         <div>
             {posts.map((post, index) => (
-                <Link to={`/${post.slug}`} key={post.id}>
+                <Link to={`/post/${post.slug}`} key={post.id}>
                     <h2>{post.title.rendered}</h2>
                     
                     <img src={post._embedded['wp:featuredmedia'][0].source_url} /> {/* Apparently this is bracket notation */}
@@ -33,4 +33,4 @@ function PostList() {
     )
 }
 
-export default PostList
+export default Blog
