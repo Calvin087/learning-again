@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useReducer, useCallback, useContext } from 'react'
+import React, { useContext } from 'react'
 import generatePDF from '../components/reportGenerator'
 import { TicketContext } from '../contexts/TicketContext'
-import TicketsComponent from '../components/TicketsComponent'
 
 const Tickets = () => {
 
