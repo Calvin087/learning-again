@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Tickets from './components/Tickets'
+import TicketsComponent from './components/TicketsComponent'
+import TicketContextProvidor from './contexts/TicketContext';
 import * as serviceWorker from './serviceWorker'
 
 
 ReactDOM.render(
   <React.StrictMode>
+    
+  <TicketContextProvidor>
 
-      <Tickets />
+    <Tickets />
+    <TicketsComponent />
+
+  </TicketContextProvidor>
 
   </React.StrictMode>,
   document.getElementById("root")

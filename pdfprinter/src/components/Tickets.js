@@ -1,27 +1,18 @@
-import React, { useEffect, useState, useReducer } from 'react'
+import React, { useEffect, useState, useReducer, useCallback, useContext } from 'react'
 import generatePDF from '../components/reportGenerator'
+import { TicketContext } from '../contexts/TicketContext'
 import TicketsComponent from '../components/TicketsComponent'
-import axios from "axios";
-
 
 const Tickets = () => {
-    const defaultValue = [
-      {
-        id: 1,
-        title: "Variable not working",
-        issue: "Fix this shit now",
-        status: "completed",
-      },
-      {
-        id: 2,
-        title: "CSS looks bad dude",
-        issue: "Fix this shit now",
-        status: "in_progress",
-      },
-    ];
+
+    const { tickets } = useContext(TicketContext)   
     
-    const [ tickets, setTickets ] = useState(defaultValue)
-    console.log(tickets);
+    // const processFormTickets = (newTicket) => {
+    //   console.log(newTicket);
+      
+    // }
+
+
     //  similar to component did mount, calling api on route /tickets
     // useEffect(() => {
     //     const getAllTickets = async () => {
@@ -49,7 +40,6 @@ const Tickets = () => {
                         </button>
                 </div>
             </div>
-            <TicketsComponent tickets={tickets}/>
         </div>
     )
 

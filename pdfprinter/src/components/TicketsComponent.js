@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState, useReducer, useCallback, useContext } from 'react'
+import { TicketContext } from '../contexts/TicketContext'
+import TicketForm from './TicketForm'
 
-const TicketsComponent = ({ tickets }) => {
+const TicketsComponent = () => {
+    
+    const { tickets } = useContext(TicketContext)    
+
+    // const addTicket = ({id, title, issue, status}) => {
+    //     setTickets([...tickets, { id, title, issue, status }])
+    // }
 
     // assign bootstrap styling classes based on status
     const assignColourToTicketStatus = ticket => {
@@ -13,8 +21,13 @@ const TicketsComponent = ({ tickets }) => {
         }
     }
 
+    // <TicketForm addTicket={addTicket} />
+
     return (
         <div className="container">
+        
+        <TicketForm />
+
             {tickets.length === 0 ? (
                 "You don't have any tickets"
             ) : (
@@ -26,7 +39,7 @@ const TicketsComponent = ({ tickets }) => {
                             <th scope="col">Title</th>
                             <th scope="col">Issue</th>
                             <th scope="col">Status</th>
-                            <th scope="col"></th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
 
@@ -40,7 +53,7 @@ const TicketsComponent = ({ tickets }) => {
                                     {ticket.status}
                                 </td>
                                 <td>
-                                    
+                                    edit
                                 </td>
                             </tr>
                         ))}

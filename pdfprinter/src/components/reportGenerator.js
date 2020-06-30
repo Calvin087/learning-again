@@ -7,7 +7,7 @@ import { format } from 'date-fns' // docs says this formats dates
 // i need a function that takes a ticket arg
 
 const generatePDF = (tickets) => {
-    let ticketData = null
+    let ticketData = ["place-holder-data"]
     const doc = new jsPDF() // initialise new pdf
 
     const tableColumn = ["Id", "Title", "Issue", "Status", "Closed on"] // docs says to define columns and titles
@@ -21,9 +21,9 @@ const generatePDF = (tickets) => {
         ticketData = [
             ticket.id,
             ticket.title,
-            ticket.request,
+            ticket.issue,
             ticket.status,
-            format(new Date(ticketData), "yyyy-MM-dd")
+            format(new Date(), "yyyy-MM-dd")
         ]
         tableRows.push(ticketData)
     })
