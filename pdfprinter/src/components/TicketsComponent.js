@@ -4,6 +4,7 @@ import TicketForm from './TicketForm'
 
 const TicketsComponent = () => {
     
+    const { removeTicket } = useContext(TicketContext)
     const { tickets } = useContext(TicketContext)    
 
     // const addTicket = ({id, title, issue, status}) => {
@@ -35,11 +36,12 @@ const TicketsComponent = () => {
                     
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col">ID</th>
                             <th scope="col">Title</th>
                             <th scope="col">Issue</th>
                             <th scope="col">Status</th>
-                            <th scope="col">Actions</th>
+                            <th scope="col"> </th>
+                            <th scope="col"> </th>
                         </tr>
                     </thead>
 
@@ -52,8 +54,11 @@ const TicketsComponent = () => {
                                 <td className={assignColourToTicketStatus(ticket)}>
                                     {ticket.status}
                                 </td>
-                                <td>
-                                    edit
+                                <td onClick={() => removeTicket(ticket.id)}>
+                                    Edit
+                                </td>
+                                <td onClick={() => removeTicket(ticket.id)}>
+                                    Delete
                                 </td>
                             </tr>
                         ))}

@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { TicketContext } from '../contexts/TicketContext'
 
-const TicketForm = ( { addTicket } ) => {
+const TicketForm = () => {
 
-    const [newTicket, setNewTicket] = useState("")
+    const { addTicket } = useContext(TicketContext)
+    const [newTicket, setNewTicket] = useState({})
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        addTicket(newTicket)  
-        setNewTicket("")      
+        addTicket(newTicket)
+        setNewTicket("")
     }
 
     const onIdChange = e => {

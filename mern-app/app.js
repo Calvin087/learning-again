@@ -15,6 +15,12 @@ mongoose
   .catch((err) => console.log(err));
 // connect to MongoDB using mongoose
 
+app.use(bodyParser.urlencoded({ // respond from other software like POSTMAN
+  extended: false
+}))
+
+app.use(bodyParser.json()) // we want it to respond to json requests
+
 app.get("/", (req, res) => {
   const user = new User({
     handle: "Jim",

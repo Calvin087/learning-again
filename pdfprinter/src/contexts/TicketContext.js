@@ -12,7 +12,7 @@ const TicketContextProvidor = (props) => {
     }])
 
     const addTicket = (ticket) => {
-        setTickets([...tickets], {ticket})
+        setTickets([...tickets, ticket])
     }
 
     const removeTicket = (id) => {
@@ -23,7 +23,7 @@ const TicketContextProvidor = (props) => {
     
 
         return (
-            <TicketContext.Provider value={{tickets, addTicket, removeTicket}}>
+            <TicketContext.Provider value={ {tickets, addTicket, removeTicket} }>
                 {props.children}
             </TicketContext.Provider>
         )
