@@ -7,7 +7,6 @@ import Post from "./post";
 import Loading from "./loading";
 import Title from "./title";
 import PageError from "./page-error";
-import bulma from 'bulma/css/bulma.css';
 
 /**
  * Theme is the root React component of our theme. The one we will export
@@ -16,10 +15,6 @@ import bulma from 'bulma/css/bulma.css';
 const Theme = ({ state }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
-
-const BootstrapStyles = () => (
-  <Global style={css(bulma)} />
-)
 
   return (
     <>
@@ -32,9 +27,7 @@ const BootstrapStyles = () => (
 
       {/* Add some global styles for the whole site, like body or a's. 
       Not classes here because we use CSS-in-JS. Only global HTML tags. */}
-
-      <BootstrapStyles />;
-      <Global styles={globalStyles} />;
+      <Global styles={globalStyles} />
 
       {/* Add the header of the site. */}
       <HeadContainer>

@@ -55,15 +55,6 @@ const Item = ({ state, item }) => {
 // Connect the Item to gain access to `state` as a prop
 export default connect(Item);
 
-// const Title = styled.h1`
-//   font-size: 2rem;
-//   color: rgba(12, 17, 43);
-//   margin: 0;
-//   padding-top: 24px;
-//   padding-bottom: 8px;
-//   box-sizing: border-box;
-// `;
-
 const Title = styled.h1`
   font-size: 2rem;
   color: rgba(12, 17, 43);

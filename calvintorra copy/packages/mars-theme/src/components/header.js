@@ -13,8 +13,8 @@ const Header = ({ state }) => {
         </StyledLink>
         <Description>{state.frontity.description}</Description>
         <MobileMenu />
-        </Container>
-        <Nav />
+      </Container>
+      <Nav />
     </>
   );
 };
