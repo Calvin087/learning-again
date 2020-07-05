@@ -1,36 +1,47 @@
-import React, { useEffect, useState, Fragment, useContext } from "react";
+import React, { Fragment, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
-import base from "../styles/base.css";
 import { WordpressContext } from "../contexts/WordpressContext";
+import NavBar from "./NavBar";
+import Footer from './Footer'
 
 function Blog() {
   const { posts } = useContext(WordpressContext);
-  console.log(posts);
-
-  // const [posts, setPosts] = useState([])
   const { slug } = useParams();
   const post = posts.filter((post) => post.slug === slug);
 
   return (
     <div>
+      <NavBar />
       <div>
         {post.map((post, index) => (
           <Fragment key={post.id}>
-            <div>
-              <h1>{post.title.rendered}</h1>
+            <section class="hero is-dark is-bold">
+              <div class="hero-body">
+                <div class="container">
+                  <div class="columns">
+                    <div class="column is-two-thirds">
+                      <h1 class="title">{post.title.rendered}</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-              <div>
-                <p
-                  dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-                ></p>
-                <img src={post.acf.featured_image_png} />
+            <br />
+
+            <div class="container">
+              <div class="columns">
+                <div class="column is-three-fifths">
+                  <p
+                    dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+                  ></p>
+                </div>
               </div>
             </div>
-
-            <p dangerouslySetInnerHTML={{ __html: post.content.rendered }}></p>
           </Fragment>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

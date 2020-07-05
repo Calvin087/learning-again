@@ -8,8 +8,8 @@ function AppRouter() {
   return (
     <Switch>
       <Route path="/" component={HomePage} exact={true} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/post/:slug" component={BlogPost} />
+      <Route path="/blog" component={Blog} exact={true} />
+      <Route path="/blog/:slug" component={BlogPost} />
     </Switch>
   );
 }
