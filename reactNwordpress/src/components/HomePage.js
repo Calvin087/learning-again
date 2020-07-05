@@ -12,7 +12,6 @@ const HomePage = () => (
     <HomeHero />
     <ReactProjectsHome />
     <WordpressProjectsHome />
-    <EmailMarketingHomePage />
     <Footer />
   </div>
 );

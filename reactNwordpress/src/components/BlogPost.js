@@ -4,10 +4,14 @@ import { WordpressContext } from "../contexts/WordpressContext";
 import NavBar from "./NavBar";
 import Footer from './Footer'
 
-function Blog() {
+function BlogPost() {
   const { posts } = useContext(WordpressContext);
   const { slug } = useParams();
-  const post = posts.filter((post) => post.slug === slug);
+  const post = posts.filter((post) => post.slug === slug); 
+  const date = post.date
+
+  console.log(date);
+  
 
   return (
     <div>
@@ -21,6 +25,7 @@ function Blog() {
                   <div class="columns">
                     <div class="column is-two-thirds">
                       <h1 class="title">{post.title.rendered}</h1>
+                      <p>By {post._embedded.author[0].name}</p>
                     </div>
                   </div>
                 </div>
@@ -46,5 +51,11 @@ function Blog() {
   );
 }
 
-export default Blog;
+export default BlogPost;
 // < img className = "blog-feature-img" src = { post._embedded['wp:featuredmedia'][0].source_url } /> {/* Apparently this is bracket notation */ }
+
+// <p>{post._embedded["wp:featuredmedia"][0].date}</p>;
+//  <img
+//    className="blog-feature-img"
+//    src={post._embedded["wp:featuredmedia"][0].source_url}
+//  />;

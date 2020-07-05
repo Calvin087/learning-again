@@ -9,7 +9,7 @@ const NavBar = () => (
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
             <img
-              src="https://bulma.io/images/bulma-logo.png"
+              src="https://calvintorra.com/wp-content/uploads/2019/07/CalvinTorraLogo.png"
               width="112"
               height="28"
             />
@@ -30,14 +30,18 @@ const NavBar = () => (
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            <HashLink class="navbar-item" to={`/#projects`}>Projects</HashLink>
-            <Link class="navbar-item" to={`/blog`}>Blog</Link>
+            <HashLink class="navbar-item" to={`/#projects`}>
+              Projects
+            </HashLink>
+            <Link class="navbar-item" to={`/blog`}>
+              Blog
+            </Link>
           </div>
 
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-primary">
+                <a class="button is-primary" href={"mailto:calvin@sliame.com"}>
                   <strong>Contact / Hire Me</strong>
                 </a>
               </div>

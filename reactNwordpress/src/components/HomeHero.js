@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 const HomeHero = () => (
   <div>
@@ -13,36 +14,43 @@ const HomeHero = () => (
               I’m also working on learning NodeJS and at some point I’d love to
               get into MongoDB and Express.
             </h2>
-            <span class="icon">
-              <a href="www.google.com">
-                <i class="fab fa-github fa-2x fa-fw" aria-hidden="true"></i>
-              </a>
-            </span>{" "}
-            <span class="icon">
-              <i class="fab fa-linkedin-in fa-2x" aria-hidden="true"></i>
-            </span>{" "}
-            <span class="icon">
-              <i class="fab fa-adobe fa-2x" aria-hidden="true"></i>
-            </span>{" "}
-            <span class="icon">
-              <i class="fab fa-html5 fa-2x" aria-hidden="true"></i>
-            </span>{" "}
-            <span class="icon">
-              <i class="fab fa-css3-alt fa-2x" aria-hidden="true"></i>
-            </span>{" "}
-            <span class="icon">
-              <i class="fab fa-js-square fa-2x" aria-hidden="true"></i>
-            </span>{" "}
-            <span class="icon">
-              <i class="fab fa-react fa-2x" aria-hidden="true"></i>
-            </span>{" "}
-            <span class="icon">
-              <i class="fab fa-sass fa-2x" aria-hidden="true"></i>
-            </span>{" "}
+            <div>
+              <span class="icon is-large">
+                <a href="https://github.com/Calvin087">
+                  <i class="fab fa-github fa-2x fa-fw 2em" aria-hidden="true"></i>
+                </a>
+              </span>{" "}
+              <span class="icon is-large">
+                <a href="https://www.linkedin.com/in/calvintorra">
+                  <i class="fab fa-linkedin-in fa-2x" aria-hidden="true"></i>
+                </a>
+              </span>{" "}
+              <span class="icon is-large">
+                <i class="fab fa-adobe fa-2x" aria-hidden="true"></i>
+              </span>{" "}
+              <span class="icon is-large">
+                <i class="fab fa-html5 fa-2x" aria-hidden="true"></i>
+              </span>{" "}
+              <span class="icon is-large">
+                <i class="fab fa-css3-alt fa-2x" aria-hidden="true"></i>
+              </span>{" "}
+              <span class="icon is-large">
+                <i class="fab fa-js-square fa-2x" aria-hidden="true"></i>
+              </span>{" "}
+              <span class="icon is-large">
+                <i class="fab fa-react fa-2x" aria-hidden="true"></i>
+              </span>{" "}
+              <span class="icon is-large">
+                <i class="fab fa-sass fa-2x" aria-hidden="true"></i>
+              </span>{" "}
+            </div>
             <br />
             <br />
             <div class="buttons">
+              
+            <HashLink class="navbar-item" to={`/#projects`}>
               <button class="button is-link">View My Work</button>
+            </HashLink>
               <button class="button is-danger">Read My Ideas</button>
             </div>
           </div>

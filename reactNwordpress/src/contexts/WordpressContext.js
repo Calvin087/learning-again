@@ -5,7 +5,7 @@ export const WordpressContext = createContext();
 const WordpressContextProvidor = (props) => {
   const [posts, setPosts] = useState([]);
 
-  const siteURL = "http://calvint1.sg-host.com/wp-json/wp/v2/books?_embed";
+  const siteURL = "http://calvint1.sg-host.com/wp-json/wp/v2/posts?_embed";
 
   useEffect(() => {
     async function loadposts() {
@@ -20,6 +20,9 @@ const WordpressContextProvidor = (props) => {
     }
     loadposts();
   }, []);
+
+  console.log(posts);
+  
 
   return (
     <WordpressContext.Provider value={{ posts }}>
