@@ -1,14 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link, BrowserRouter } from "react-router-dom";
-import * as serviceWorker from './serviceWorker';
-import AppRouter from './Routers/AppRouter'
-
+import React from "react";
+import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  BrowserRouter,
+} from "react-router-dom";
+import * as serviceWorker from "./serviceWorker";
+import AppRouter from "./Routers/AppRouter";
+import WordpressContextProvidor from "./contexts/WordpressContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AppRouter />
+      <WordpressContextProvidor>
+        <AppRouter />
+      </WordpressContextProvidor>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
