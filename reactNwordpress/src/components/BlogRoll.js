@@ -22,7 +22,7 @@ function BlogRoll() {
         </div>
       </section>
 
-      <section class="section"></section>
+      <br />
 
       <div class="container">
         <div class="columns">
@@ -30,24 +30,24 @@ function BlogRoll() {
             {posts.map((post, index) => (
               <div class="container" key={post.id}>
                 <article class="media">
-                  <figure class="media-left">
-                    <p class="image is-128x128">
-                      <img
-                        src={post._embedded["wp:featuredmedia"][0].source_url}
-                      />
-                    </p>
-                  </figure>
                   <div class="media-content">
                     <div class="content">
                       <p>
                         <Link to={`blog/${post.slug}`}>
-                          <h4>{post.title.rendered}</h4>{" "}
+                          <h3>{post.title.rendered}</h3>{" "}
                         </Link>
                         <span
                           dangerouslySetInnerHTML={{
                             __html: post.excerpt.rendered,
                           }}
                         ></span>
+                        <br />
+                        <div class="buttons">
+                          <Link to={`blog/${post.slug}`}>
+                            <button class="button is-info">Read More</button>
+                          </Link>
+                        </div>
+
                         <br />
                       </p>
                     </div>

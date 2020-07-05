@@ -4,7 +4,7 @@ import CardComponent from "./CardComponent";
 const ReactProjectsHome = () => (
   <div>
     <section class="hero">
-      <div class="hero-body">
+      <div class="hero-body" id="projects">
         <div class="container">
           <h1 class="title">
             <i class="fab fa-react" aria-hidden="true">
