@@ -1,36 +1,50 @@
 import React from "react";
+import TheNavigation from "./TheNavigation";
 
 const TheBlogPost = () => (
   <div>
-    <div id="TheBlog-image">
-      <p>The Blog</p>
+    <div
+      style={{
+        backgroundImage: `url("../images/background-dots.png")`,
+        backgroundSize: "1440px",
+      }}
+    >
+      <TheNavigation />
+
+      {/* END OF NAV */}
+
+      <div
+        id="main-container"
+        className="container mx-auto px-6 py-12 w-full lg:w-2/4"
+      >
+        <div className="text-4xl lg:text-5xl">
+          <p className="text-black font-thin text-center">
+            Building a New Website using Wordpress Headless CMS
+          </p>
+        </div>
+
+        <div className="flex border-b border-red-500 py-10 relative">
+          <p
+            className="bg-black text-white font-hairline text-xs px-4 py-1"
+            style={{ fontSize: "10px" }}
+          >
+            2020-06-27T16:00:25
+          </p>
+          <img src="../images/black-stripes-box.png" className=" h-6" />
+
+          <div className="bg-gray-400 rounded-full h-5 text-xs px-4 mb-5 absolute middle-0 right-0">
+            <p className="text-gray-600">#js-beginners</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="BlogList-title">
-      <p>Thougts&Ideas</p>
-    </div>
+    {/* END OF HERO */}
 
-    <div id="small-Hero-text">
-      <div id="small-Hero-Left">
-        <p>
-          Various ideas from my time working with Javascript and the frameworks
-          available
-        </p>
-      </div>
-      <div id="small-Hero-right">
-        <p>HTML5/CSS3/Javascript/ ReactJS/TheWorld</p>
-      </div>
-    </div>
-
-    <div id="BlogPost-col-centered">
-      <div id="blogpost-title-border-bottom">
-        <p>Title Goes Here</p>
-      </div>
-
-      <div id="Title-element-from-blog-list">
-        <p>Date Goes Here</p>
-        <p>#Idon'tknowJavascript</p>
-      </div>
+    <div
+      id="BlogPost-col-centered"
+      className="w-full lg:w-2/4 mx-auto py-10 px-10"
+    >
 
       <div id="HTML-insert-of-blog-post">
         <p>
@@ -38,32 +52,14 @@ const TheBlogPost = () => (
           tellus luctus, porta nisi sed, placerat justo. Donec pretium leo
           sapien, quis mollis dolor rhoncus a. Praesent maximus vel nibh varius
           faucibus. Fusce dapibus, libero vel ultricies hendrerit, nunc justo
-          blandit arcu, eu convallis urna arcu nec ipsum. Aenean efficitur dolor
-          eu leo vestibulum, vitae finibus turpis auctor. Morbi in mauris quis
-          velit dictum rutrum. Curabitur turpis felis, dapibus vel aliquet non,
-          ornare quis nisi. Suspendisse vitae enim mattis, blandit nibh
-          molestie, egestas turpis. Fusce vitae justo metus. Sed feugiat nunc a
-          porttitor efficitur. Phasellus eget enim et felis dignissim blandit
-          vitae hendrerit libero. Nulla tincidunt orci nibh. Phasellus ut
-          interdum sapien. Sed rutrum lectus non pretium gravida. Mauris euismod
-          iaculis nulla, scelerisque tincidunt dui ultrices id. Curabitur massa
-          sem, efficitur quis nunc vitae, suscipit ornare libero. Phasellus
-          iaculis condimentum orci eu gravida. Nulla vulputate tincidunt arcu.
-          Suspendisse viverra felis risus, ultricies pharetra urna eleifend
-          quis. Sed dictum dignissim tortor, quis porttitor elit commodo sed.
-          Nulla consectetur accumsan velit, id efficitur ante pretium vel.
-          Quisque tempus ornare porttitor. In hac habitasse platea dictumst.
-          Pellentesque aliquet, orci id porta venenatis, nulla ipsum convallis
-          tellus, sed suscipit ex dolor volutpat quam. Fusce sed nunc vitae nisi
-          convallis fringilla quis vitae quam. Aliquam dignissim massa a magna
-          pellentesque aliquet. Vivamus viverra ipsum massa, in accumsan mauris
-          mattis sed. Proin eget elementum orci, sed scelerisque nunc. Nullam ac
-          massa augue. Etiam pharetra fringilla tortor, ut ultricies nulla
-          venenatis in. Integer ornare accumsan mi a dictum. Duis vel vehicula
-          est. Duis auctor tellus leo, non tempus sem tincidunt vulputate. Nunc
-          in tincidunt purus. In hac habitasse platea dictumst. Proin eget
-          fringilla mi. Vestibulum a lobortis dolor. Integer imperdiet rutrum
-          sollicitudin.
+          blandit arcu, eu convallis urna arcu nec ipsum.
+        </p>
+        <p>
+          Aenean efficitur dolor eu leo vestibulum, vitae finibus turpis auctor.
+          Morbi in mauris quis velit dictum rutrum. Curabitur turpis felis,
+          dapibus vel aliquet non, ornare quis nisi. Suspendisse vitae enim
+          mattis, blandit nibh molestie, egestas turpis. Fusce vitae justo
+          metus.
         </p>
       </div>
     </div>

@@ -1,50 +1,50 @@
 import React from "react";
+import TheNavigation from "./TheNavigation";
+import TheBlogCard from './TheBlogCard'
 
 const TheBlogList = () => (
   <div>
-    <div id="TheBlog-image">
-      <p>The Blog</p>
+    <div
+      style={{
+        backgroundImage: `url("../images/background-dots.png")`,
+        backgroundSize: "1440px",
+      }}
+    >
+      <TheNavigation />
+
+      <div
+        id="main-container"
+        className="container mx-auto px-6 py-12 lg:w-2/6 xl:w-2/6"
+      >
+        <div id="great087-image" class="w-full ">
+          <img src="../images/the-blog.png" />
+        </div>
+
+        <div className="text-5xl">
+          <p>
+            <span className="font-semibold">Thoughts</span>
+            <span className="font-thin">&</span>
+            <span className="text-red-700 font-thin">Ideas</span>
+          </p>
+        </div>
+
+        <div className="flex mb-2 border-b-4 border-black">
+          <div className="w-1/2 mb-2">
+            <p className="text-xs">Various thoughts while exploring code</p>
+          </div>
+          <div className="w-1/2 ml-6">
+            <p className="text-xs">HTML5/CSS3/Javascript/ ReactJS/TheWorld</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="BlogList-title">
-      <p>Thougts&Ideas</p>
+    <div className="flex flex-wrap p-10">
+      <TheBlogCard />
+      <TheBlogCard />
+      <TheBlogCard />
+      <TheBlogCard />
     </div>
-
-    <div id="small-Hero-text">
-      <div id="small-Hero-Left">
-        <p>
-          Various ideas from my time working with Javascript and the frameworks
-          available
-        </p>
-      </div>
-      <div id="small-Hero-right">
-        <p>HTML5/CSS3/Javascript/ ReactJS/TheWorld</p>
-      </div>
-    </div>
-
-    <div id="card-component-goes-here">
-    
-      <div>
-        <p>date of project goes here date.toDateString()?</p>
-        <p>Try to insert striped image on the right here?</p>
-      </div>
-    
-      <div id="header-image-border-bottom">
-        <p>header image goes here</p>
-      </div>
-
-      <div id="left-label-background-bottom-fixed-image">
-        <p>Blog post title here</p>
-        <p>Regular size text here, excerpt of blog post here</p>
-      </div>
-
-      <div id="post-footer">
-        <button>View Project_</button>
-        <p>#tagfromtheapi</p>
-      </div>
-
-    </div>
-
   </div>
 );
 
