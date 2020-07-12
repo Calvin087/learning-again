@@ -12,25 +12,22 @@ const TheProjectCardW = () => (
 
       <div className="flex px-4 py-4">
         <div
-          className="w-1/4 bg-blue-900 rounded-lg mr-4 bg-bottom"
+          className="w-1/4 bg-blue-500 rounded-lg mr-4 bg-bottom"
           style={{
             backgroundImage: `url("../images/border-bottom.png")`,
             backgroundRepeat: "no-repeat",
           }}
         >
           <div className="py-3 text-center">
-            <i
-              className="fab fa-react text-6xl text-center"
-              style={{ color: "#61dafb" }}
-            ></i>
+            <i className="fab fa-wordpress text-6xl text-center text-gray-100"></i>
           </div>
 
           <p
-            className="text-sm p-2 text-blue-200 mb-10 text-center"
+            className="text-sm p-2 text-gray-100 mb-10 text-center"
             style={{ fontSize: "8px" }}
           >
-            React makes it painless to create interactive UIs. Design simple
-            views for each state in your application.
+            WordPress is open source software you can use to create a beautiful
+            website, blog, or app.
           </p>
         </div>
 

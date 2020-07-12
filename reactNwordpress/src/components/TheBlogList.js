@@ -39,7 +39,9 @@ const TheBlogList = () => (
       </div>
     </div>
 
-    <div className="flex flex-wrap p-10">
+    <div className="flex flex-wrap p-4">
+      <TheBlogCard />
+      <TheBlogCard />
       <TheBlogCard />
       <TheBlogCard />
       <TheBlogCard />
