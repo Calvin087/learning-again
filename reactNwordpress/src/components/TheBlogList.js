@@ -6,6 +6,7 @@ import TheBlogCardT from './TheBlogCardT'
 
 const TheBlogList = () => {
   const { posts } = useContext(WordpressContext);
+  
 
   return (
     <div>
@@ -33,23 +34,29 @@ const TheBlogList = () => {
             </p>
           </div>
 
-          <div className="flex mb-2 border-b-4 border-black">
+          <div className="flex mb-2 mt-4 border-b-4 border-black">
             <div className="w-1/2 mb-2">
-              <p className="text-xs">Various thoughts while exploring code</p>
+              <p className="text-xs">
+                Various thoughts while exploring code{" "}
+                <span className="dot"></span>
+              </p>
             </div>
             <div className="w-1/2 ml-6">
-              <p className="text-xs">HTML5/CSS3/Javascript/ ReactJS/TheWorld</p>
+              <p className="text-xs">
+                HTML5/CSS3/Javascript/ ReactJS/TheWorld{" "}
+                <span className="dot"></span>
+              </p>
             </div>
           </div>
         </div>
       </div>
 
       <div className="container flex flex-wrap px-6">
-          {posts.map((post, index) => (
-            <div key={post.id} className="w-full md:w-1/2 lg:w-1/3 px-2 py-12">
-              <TheBlogCardT {...post} />
-            </div>
-          ))}
+        {posts.map((post, index) => (
+          <div key={post.id} className="w-full md:w-1/2 lg:w-1/3 px-2 py-12">
+            <TheBlogCardT {...post} />
+          </div>
+        ))}
       </div>
     </div>
   );

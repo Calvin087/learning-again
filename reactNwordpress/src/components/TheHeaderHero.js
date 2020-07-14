@@ -159,7 +159,7 @@ const TheHeaderHero = () => (
       </div>
     </div>
     <div id="projects" className="container">
-      <TheHomeProjects />;
+      <TheHomeProjects />
     </div>
   </div>
 );

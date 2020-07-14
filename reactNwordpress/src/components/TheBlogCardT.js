@@ -20,7 +20,7 @@ const TheBlogCard = (props) => {
         <div id="header-image-border-bottom">
           <img
             className="h-48 w-full object-cover object-top rounded-tr-lg rounded-tl-none border-b-2 border-black"
-            src={props._embedded["wp:featuredmedia"][0].source_url}
+            src={props.acf.Featured_Image}
           />
         </div>
 

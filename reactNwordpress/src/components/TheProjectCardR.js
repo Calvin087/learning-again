@@ -6,7 +6,7 @@ const TheProjectCardR = () => (
       <div id="header-image-border-bottom">
         <img
           className="h-48 w-full object-cover object-top rounded-tl-lg rounded-tr-lg border-b-2 border-black"
-          src="https://wallpaperboat.com/wp-content/uploads/2020/04/gundam-wallpaper-full-hd.jpg"
+          src={"../images/test.gif"}
         />
       </div>
 

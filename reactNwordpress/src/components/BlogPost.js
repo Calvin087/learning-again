@@ -25,6 +25,7 @@ function BlogPost() {
                   <div class="columns">
                     <div class="column is-two-thirds">
                       <h1 class="title">{post.title.rendered}</h1>
+                      <h1 class="title">{post.date}</h1>
                       <p>By {post._embedded.author[0].name}</p>
                     </div>
                   </div>

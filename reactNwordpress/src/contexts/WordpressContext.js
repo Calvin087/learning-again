@@ -5,7 +5,7 @@ export const WordpressContext = createContext();
 const WordpressContextProvidor = (props) => {
   const [posts, setPosts] = useState([]);
 
-  const siteURL = "http://calvint1.sg-host.com/wp-json/wp/v2/posts?_embed";
+  const siteURL = "http://calvint1.sg-host.com/wp-json/wp/v2/react_blog?_embed";
 
   useEffect(() => {
     async function loadposts() {
