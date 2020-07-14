@@ -1,7 +1,7 @@
 import React from "react";
 
 const TheProjectCardR = () => (
-  <div className="w-full lg:w-1/3 p-2">
+  <div className="w-full md:w-1/2 xl:w-1/4 p-2">
     <div className="bg-gray-200 rounded-lg border-2 border-black">
       <div id="header-image-border-bottom">
         <img
@@ -18,32 +18,28 @@ const TheProjectCardR = () => (
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className="py-3 text-center">
+          <div className="py-2 text-center">
             <i
-              className="fab fa-react text-6xl text-center"
+              className="fab fa-react text-5xl text-center"
               style={{ color: "#61dafb" }}
             ></i>
           </div>
 
           <p
-            className="text-sm p-2 text-blue-200 mb-10 text-center"
+            className="text-sm px-2 text-blue-200 mb-10 text-center"
             style={{ fontSize: "8px" }}
           >
-            React makes it painless to create interactive UIs. Design simple
-            views for each state in your application.
+            ReactJS framework.
           </p>
         </div>
 
         <div id="left-label-background-bottom-fixed-image" className="w-3/4">
           <div className="text-2xl pb-4">
-            <p className="text-black font-thin">
-              Building the JS Calculator app using Tailwind CSS
-            </p>
+            <p className="text-black font-thin">Black Economics</p>
           </div>
           <p className="text-sm">
-            A website focused on SEO for an occupational therapist in Madrid.
-            Wordpress // SEO // Design // DIVI A website focused on SEO for an
-            occupational therapist in Madrid.
+            The beginnings of a platform, dedicated to supporting the black
+            community.
           </p>
 
           <button

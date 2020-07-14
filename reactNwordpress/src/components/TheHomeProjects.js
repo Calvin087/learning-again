@@ -16,8 +16,6 @@ const TheHomeProjects = () => (
       <TheProjectCardR />
       <TheProjectCardR />
       <TheProjectCardR />
-      <TheProjectCardR />
-      <TheProjectCardR />
     </div>
     
     <div className="container mx-auto lg:w-2/6 xl:w-2/6 text-center mt-12">
@@ -28,8 +26,6 @@ const TheHomeProjects = () => (
     </div>
 
     <div className="flex flex-wrap p-4">
-      <TheProjectCardW />
-      <TheProjectCardW />
       <TheProjectCardW />
       <TheProjectCardW />
       <TheProjectCardW />

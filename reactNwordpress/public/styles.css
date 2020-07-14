@@ -1,5 +1,19 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
+code, .code, pre {
+  color: red;
+  background: black;
+}
+
+.dot {
+  height: 5px;
+  width: 5px;
+  vertical-align: middle;
+  background-color: #c53030;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 /* Document
    ========================================================================== */
 
