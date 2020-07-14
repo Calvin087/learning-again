@@ -44,7 +44,7 @@ const TheBlogList = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap px-6">
+      <div className="container flex flex-wrap px-6">
           {posts.map((post, index) => (
             <div key={post.id} className="w-full md:w-1/2 lg:w-1/3 px-2 py-12">
               <TheBlogCardT {...post} />

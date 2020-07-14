@@ -158,7 +158,7 @@ const TheHeaderHero = () => (
         </div>
       </div>
     </div>
-    <div id="projects">
+    <div id="projects" className="container">
       <TheHomeProjects />;
     </div>
   </div>
