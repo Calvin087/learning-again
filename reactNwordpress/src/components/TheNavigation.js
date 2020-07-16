@@ -20,20 +20,20 @@ const TheNavigation = () => (
       <div>
         <ul className="flex">
           <HashLink
-            className="mr-6 block mt-4 lg:inline-block lg:mt-0 font-medium"
+            className="mr-4 xl:mr-8 block mt-4 lg:inline-block lg:mt-0 font-medium"
             to={`/#projects`}
           >
             Projects<span className="text-red-500"> _</span>
           </HashLink>
           <Link
-            className="mr-6 block mt-4 lg:inline-block lg:mt-0 font-medium"
+            className="mr-4 xl:mr-8 block mt-4 lg:inline-block lg:mt-0 font-medium"
             to={`/blog`}
           >
             Blog<span className="text-red-500"> _</span>
           </Link>
 
           <HashLink
-            className="mr-6 block mt-4 lg:inline-block lg:mt-0 font-medium"
+            className=" block mt-4 lg:inline-block lg:mt-0 font-medium"
             to={`/#contact`}
           >
             Contact Me<span className="text-red-500"> _</span>
