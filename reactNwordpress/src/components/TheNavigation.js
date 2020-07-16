@@ -31,12 +31,13 @@ const TheNavigation = () => (
           >
             Blog<span className="text-red-500"> _</span>
           </Link>
-          <a
-            className="block mt-4 lg:inline-block lg:mt-0 font-medium"
-            href={"mailto:calvin@sliame.com"}
+
+          <HashLink
+            className="mr-6 block mt-4 lg:inline-block lg:mt-0 font-medium"
+            to={`/#contact`}
           >
-            Contact<span className="text-red-500"> _</span>
-          </a>
+            Contact Me<span className="text-red-500"> _</span>
+          </HashLink>
         </ul>
       </div>
     </div>
