@@ -38,7 +38,8 @@ const TheHeaderHero = () => (
             </div>
             <div className="w-1/2 ml-2 pl-4">
               <p className="text-xs">
-                HTML5/CSS3/Javascript/ ReactJS/TheWorld <span className="dot"></span>
+                HTML5/CSS3/Javascript/ ReactJS/TheWorld{" "}
+                <span className="dot"></span>
               </p>
             </div>
           </div>
@@ -62,7 +63,7 @@ const TheHeaderHero = () => (
                   width: "150px",
                   height: "50px",
                 }}
-                className="w-1/2 text-white mr-4"
+                className="w-1/2 text-white mr-4 hover:bg-black"
               >
                 The Projects<span className="text-red-500"> _</span>
               </button>
@@ -75,7 +76,7 @@ const TheHeaderHero = () => (
                   width: "150px",
                   height: "50px",
                 }}
-                className="w-1/2 text-white"
+                className="w-1/2 text-white mr-4 hover:bg-black"
               >
                 The Blog<span className="text-red-500"> _</span>
               </button>

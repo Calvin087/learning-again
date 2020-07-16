@@ -53,7 +53,7 @@ const TheContactForm = () => {
             width: "150px",
             height: "50px",
           }}
-          className="text-white mt-4"
+          className="text-white mt-4 hover:bg-black"
         >
           Send Message<span className="text-red-500"> _</span>
         </button>

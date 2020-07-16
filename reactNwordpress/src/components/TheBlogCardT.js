@@ -5,7 +5,7 @@ const TheBlogCard = (props) => {
   const date = new Date(props.date).toDateString()
   
   return (
-    <div className="">
+    <div className="hover:shadow-xl transition ease-out duration-500">
       <div className="flex">
         <p
           className="bg-black text-white font-hairline text-xs px-4 py-1"
@@ -49,15 +49,13 @@ const TheBlogCard = (props) => {
                   width: "150px",
                   height: "50px",
                 }}
-                className="w-1/2 text-white"
+                className="w-1/2 text-white hover:bg-black"
               >
                 Read More<span className="text-red-500"> _</span>
               </button>
             </Link>
             <div className="bg-gray-400 rounded-full h-5 text-xs px-4 mb-5 absolute bottom-0 right-0">
-              <p className="text-gray-600">
-                #{props.acf.jsxTag}
-              </p>
+              <p className="text-gray-600">#{props.acf.jsxTag}</p>
             </div>
           </div>
         </div>

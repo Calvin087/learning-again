@@ -38,7 +38,7 @@ const TheHomeProjects = () => (
         }
         title={"React Expense Tracker"}
         description={
-          "A Crud app built in React to track expenses and to learn how React works."
+          "A Crud app built in React to track expenses while using AriBnB Libraries."
         }
         link={"https://expensis-app.firebaseapp.com/dashboard"}
       />
@@ -48,7 +48,7 @@ const TheHomeProjects = () => (
         }
         title={"Lockdown Productivity App"}
         description={
-          "Understanding how to build components in React and use Airbnb Libraries"
+          "Understanding how to build components in React and manage state."
         }
         link={"https://lockdown-decision.web.app/"}
       />

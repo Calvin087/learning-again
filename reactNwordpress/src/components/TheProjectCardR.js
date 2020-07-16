@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const TheProjectCardR = (props) => (
   <div className="w-full md:w-1/2 xl:w-1/4 p-2">
-    <div className="bg-gray-200 rounded-lg border-2 border-black">
+    <div className="bg-gray-200 rounded-lg border-2 border-black hover:shadow-xl transition ease-out duration-500">
       <div id="header-image-border-bottom">
         <img
-          className="h-48 w-full object-cover object-top rounded-tl-lg rounded-tr-lg border-b-2 border-black"
+          className="h-48 w-full object-cover object-top rounded-tl-lg rounded-tr-lg border-b-2 border-black bg-black"
           src={props.image}
         />
       </div>
@@ -48,7 +48,7 @@ const TheProjectCardR = (props) => (
                   width: "150px",
                   height: "50px",
                 }}
-                className="w-1/2 text-white"
+                className="w-1/2 text-white hover:bg-black"
               >
                 Live Project<span className="text-red-500"> _</span>
               </button>
