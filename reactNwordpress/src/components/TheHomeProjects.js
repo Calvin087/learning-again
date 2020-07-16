@@ -14,7 +14,7 @@ const TheHomeProjects = () => (
     <div className="flex flex-wrap p-4">
       <TheProjectCardR
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/calvin.gif"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/blogg.gif"
         }
         title={"Calvin T's website redesign"}
         description={
@@ -64,7 +64,7 @@ const TheHomeProjects = () => (
     <div className="flex flex-wrap p-4">
       <TheProjectCardW
         image={"http://calvint1.sg-host.com/wp-content/uploads/2020/07/eva.gif"}
-        title={"Eva Tellez TO, Build + SEO"}
+        title={"Eva Tellez OT, Build + SEO"}
         description={
           "Website design and build for an occupational therapist based in Madrid."
         }
