@@ -7,6 +7,10 @@ const TheBlogPost = (props) => {
   console.log(props);
   const TheDate = new Date(props.date).toDateString();
 
+const divStlye = {
+  h2: ""
+}
+
   return (
     <div key={props.id}>
       <div
@@ -52,7 +56,7 @@ const TheBlogPost = (props) => {
         className="w-full lg:w-1/2 xl:w-1/2 mx-auto py-10 px-10"
       >
         <div id="HTML-insert-of-blog-post">
-          <p dangerouslySetInnerHTML={{ __html: props.content.rendered }} className="text-xl "></p>
+          <div dangerouslySetInnerHTML={{ __html: props.content.rendered }} className="text-xl "></div>
         </div>
       </div>
     </div>
