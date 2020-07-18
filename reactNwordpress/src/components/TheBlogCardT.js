@@ -5,7 +5,7 @@ const TheBlogCard = (props) => {
   const date = new Date(props.date).toDateString()
   
   return (
-    <div className="hover:shadow-xl transition ease-out duration-500">
+    <div className="hover:shadow-2xl transition ease-out duration-500">
       <div className="flex">
         <p
           className="bg-black text-white font-hairline text-xs px-4 py-1"

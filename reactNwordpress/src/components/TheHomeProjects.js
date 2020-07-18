@@ -1,6 +1,7 @@
 import React from "react";
 import TheProjectCardR from "./TheProjectCardR";
 import TheProjectCardW from "./TheProjectCardW";
+import { Link } from "react-router-dom";
 
 const TheHomeProjects = () => (
   <div>
@@ -14,17 +15,17 @@ const TheHomeProjects = () => (
     <div className="flex flex-wrap p-4">
       <TheProjectCardR
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/blogg.gif"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.39.13_640x400.png"
         }
         title={"Calvin T's website redesign"}
         description={
           "Taking my portfolio from wordpress to React and hacking together a blog API"
         }
-        link={"http://www.google.com"}
+   
       />
       <TheProjectCardR
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/black.gif"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.42.10_640x400.png"
         }
         title={"Black Economics Biz Directory"}
         description={
@@ -34,7 +35,7 @@ const TheHomeProjects = () => (
       />
       <TheProjectCardR
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/expensis.gif"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.43.44_640x400.png"
         }
         title={"React Expense Tracker"}
         description={
@@ -44,7 +45,7 @@ const TheHomeProjects = () => (
       />
       <TheProjectCardR
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/indecision.gif"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.44.31_640x400.png"
         }
         title={"Lockdown Productivity App"}
         description={
@@ -63,7 +64,9 @@ const TheHomeProjects = () => (
 
     <div className="flex flex-wrap p-4">
       <TheProjectCardW
-        image={"http://calvint1.sg-host.com/wp-content/uploads/2020/07/eva.gif"}
+        image={
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.45.06_640x400.png"
+        }
         title={"Eva Tellez OT, Build + SEO"}
         description={
           "Website design and build for an occupational therapist based in Madrid."
@@ -72,7 +75,7 @@ const TheHomeProjects = () => (
       />
       <TheProjectCardW
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/green.gif"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.45.41_640x400.png"
         }
         title={"The Contractor Sales Template"}
         description={
@@ -82,7 +85,7 @@ const TheHomeProjects = () => (
       />
       <TheProjectCardW
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/karate.gif"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.46.11_640x400.png"
         }
         title={"Kyokushin Karate Build + SEO"}
         description={
@@ -92,7 +95,7 @@ const TheHomeProjects = () => (
       />
       <TheProjectCardW
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/torra.gif"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.46.46_640x400.png"
         }
         title={"Torra Media Marketing"}
         description={

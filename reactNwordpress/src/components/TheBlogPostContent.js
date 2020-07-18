@@ -3,13 +3,9 @@ import TheNavigation from "./TheNavigation";
 import { Link, useParams } from "react-router-dom";
 import { WordpressContext } from "../contexts/WordpressContext";
 
-const TheBlogPost = (props) => {
+const TheBlogPostContent = (props) => {
   console.log(props);
   const TheDate = new Date(props.date).toDateString();
-
-const divStlye = {
-  h2: ""
-}
 
   return (
     <div key={props.id}>
@@ -52,15 +48,17 @@ const divStlye = {
       {/* END OF HERO */}
 
       <div
-        id="BlogPost-col-centered"
         className="w-full lg:w-1/2 xl:w-1/2 mx-auto py-10 px-10"
       >
         <div id="HTML-insert-of-blog-post">
-          <div dangerouslySetInnerHTML={{ __html: props.content.rendered }} className="text-xl "></div>
+          <div
+            dangerouslySetInnerHTML={{ __html: props.content.rendered }}
+            className="blog"
+          ></div>
         </div>
       </div>
     </div>
   );
 };
 
-export default TheBlogPost;
+export default TheBlogPostContent;
