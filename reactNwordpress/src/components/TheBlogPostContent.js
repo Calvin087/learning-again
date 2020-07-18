@@ -1,10 +1,13 @@
-import React, { Fragment, useContext } from "react";
+import React from "react";
+import { useParams } from "react-router-dom";
 import TheNavigation from "./TheNavigation";
-import { Link, useParams } from "react-router-dom";
-import { WordpressContext } from "../contexts/WordpressContext";
+import TheDisqusBox from './TheDisqusBox'
+
 
 const TheBlogPostContent = (props) => {
   console.log(props);
+  const { slug } = useParams();
+  const websiteName = `https://calvintorraportfolio.web.app/${slug}`
   const TheDate = new Date(props.date).toDateString();
 
   return (
@@ -47,15 +50,20 @@ const TheBlogPostContent = (props) => {
 
       {/* END OF HERO */}
 
-      <div
-        className="w-full lg:w-1/2 xl:w-1/2 mx-auto py-10 px-10"
-      >
-        <div id="HTML-insert-of-blog-post">
+      <div className="w-full lg:w-1/2 xl:w-1/2 mx-auto py-10 px-10">
+        <div id="HTML-insert-of-blog-post" className="pb-12">
           <div
             dangerouslySetInnerHTML={{ __html: props.content.rendered }}
             className="blog"
           ></div>
         </div>
+
+        <TheDisqusBox 
+          url={`${websiteName}${websiteName}`}
+          identifier={"10"}
+          title={props.title.rendered}
+        />
+        
       </div>
     </div>
   );
