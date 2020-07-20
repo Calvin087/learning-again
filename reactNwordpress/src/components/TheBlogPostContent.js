@@ -1,7 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import TheNavigation from "./TheNavigation";
+import TheScrollToTop from "./TheScrollToTop";
 import TheDisqusBox from './TheDisqusBox'
+
 
 
 const TheBlogPostContent = (props) => {
@@ -18,6 +20,7 @@ const TheBlogPostContent = (props) => {
           backgroundSize: "1440px",
         }}
       >
+        <TheScrollToTop />
         <TheNavigation />
 
         {/* END OF NAV */}
@@ -63,7 +66,7 @@ const TheBlogPostContent = (props) => {
           identifier={"10"}
           title={props.title.rendered}
         />
-        
+
       </div>
     </div>
   );
