@@ -3,9 +3,18 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import TheNavigation from "./TheNavigation";
 import TheHomeProjects from "./TheHomeProjects";
+import TheHelmet from "./TheHelmet";
 
 const TheHeaderHero = () => (
   <div>
+    <TheHelmet
+      title={"Calvin T - FrontEnd Developer"}
+      content={
+        "My life has taken me through various roles, from Graphic Designer to Marketing Consultant, through Sales and now Frontend Development. I'm currently seeking a long term relationship with a product based company where we can raise lots of little web components and live happily ever after."
+      }
+      href={"https://calvintorra.com/"}
+    />
+
     <div
       style={{
         backgroundImage: `url("../images/background-dots.png")`,
@@ -18,13 +27,13 @@ const TheHeaderHero = () => (
         id="main-container"
         className="container flex flex-wrap mx-auto -mt-12 px-6 py-2"
       >
-        <div id="col-container-1" class="w-full xl:w-2/6 mt-20 pr-4">
+        <div id="col-container-1" class="w-full xl:w-2/6 mt-20 pr-16 xl:p-0">
           <div id="great087-image">
             <img src="../images/great087.png" />
           </div>
 
-          <div className="text-5xl">
-            <p className="font-semibold">
+          <div className="pr-16">
+            <p className="font-semibold text-4xl lg:text-5xl xl:text-5xl">
               Frontend<span className="text-red-700 font-thin">Developer</span>
             </p>
           </div>
@@ -44,14 +53,16 @@ const TheHeaderHero = () => (
             </div>
           </div>
 
-          <div className="pr-6 pb-8 mt-4">
+          <div className="pr-6 mt-4">
             <p className="pb-4">
-              Frontend Developer based in Madrid. Currently on the path to
-              mastering ReactJS…..but we’re not sure how long that will take.
+              My life has taken me through various roles, from Graphic Designer
+              to Marketing Consultant, through Sales and now Frontend
+              Development.
             </p>
-            <p>
-              I’m also working on learning NodeJS and at some point I’d love to
-              get into MongoDB and Express.
+            <p className="pb-6">
+              I'm currently seeking a long term relationship with a product
+              based company where we can raise lots of little web components and
+              live happily ever after.
             </p>
           </div>
 

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import TheNavigation from "./TheNavigation";
 import TheScrollToTop from "./TheScrollToTop";
 import TheDisqusBox from './TheDisqusBox'
-
+import TheHelmet from './TheHelmet'
 
 
 const TheBlogPostContent = (props) => {
@@ -20,6 +20,12 @@ const TheBlogPostContent = (props) => {
           backgroundSize: "1440px",
         }}
       >
+        <TheHelmet
+          title={props.title.rendered}
+          content={props.acf.excerpt}
+          href={websiteName}
+        />
+
         <TheScrollToTop />
         <TheNavigation />
 
@@ -61,12 +67,11 @@ const TheBlogPostContent = (props) => {
           ></div>
         </div>
 
-        <TheDisqusBox 
-          url={`${websiteName}${websiteName}`}
+        <TheDisqusBox
+          url={`${websiteName}`}
           identifier={"10"}
           title={props.title.rendered}
         />
-
       </div>
     </div>
   );
