@@ -23,12 +23,9 @@ const TheHeaderHero = () => (
     >
       <TheNavigation />
 
-      <div
-        id="main-container"
-        className="container flex flex-wrap mx-auto -mt-12 px-6 py-2"
-      >
-        <div id="col-container-1" class="w-full xl:w-2/6 mt-20 pr-16 xl:p-0">
-          <div id="great087-image">
+      <div className="container flex flex-wrap mx-auto -mt-12 px-6 py-2">
+        <div class="w-full xl:w-2/6 mt-20 pr-6 xl:p-0">
+          <div>
             <img src="../images/great087.png" />
           </div>
 
@@ -66,7 +63,7 @@ const TheHeaderHero = () => (
             </p>
           </div>
 
-          <div id="button-container">
+          <div>
             <HashLink to={`/#projects`}>
               <button
                 style={{
@@ -96,15 +93,12 @@ const TheHeaderHero = () => (
         </div>
 
         <div class="w-full xl:w-3/6 xl:px-4 pt-6">
-          <div id="gundam-image-middle-col">
+          <div>
             <img className="w-full" src="../images/gundam.png" />
           </div>
         </div>
 
-        <div
-          id="gundam-weapons-right-col"
-          class="flex flex-wrap w-full xl:w-1/6 mb-4 xl:mt-16 lg:mt-16 mt-4"
-        >
+        <div class="flex flex-wrap w-full xl:w-1/6 mb-4 xl:mt-16 lg:mt-16 mt-4">
           <div className="mb-3 w-1/3 lg:w-1/3 lg:px-8 xl:w-full pr-4 lg:p-0 xl:p-0">
             <img
               className="w-full inset-x-0.bottom-0 mb-4"
@@ -170,7 +164,7 @@ const TheHeaderHero = () => (
         </div>
       </div>
     </div>
-    <div id="projects" className="container">
+    <div className="container">
       <TheHomeProjects />
     </div>
   </div>

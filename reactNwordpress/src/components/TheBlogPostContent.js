@@ -2,14 +2,13 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import TheNavigation from "./TheNavigation";
 import TheScrollToTop from "./TheScrollToTop";
-import TheDisqusBox from './TheDisqusBox'
-import TheHelmet from './TheHelmet'
-
+import TheDisqusBox from "./TheDisqusBox";
+import TheHelmet from "./TheHelmet";
 
 const TheBlogPostContent = (props) => {
   console.log(props);
   const { slug } = useParams();
-  const websiteName = `https://calvintorraportfolio.web.app/${slug}`
+  const websiteName = `https://calvintorraportfolio.web.app/${slug}`;
   const TheDate = new Date(props.date).toDateString();
 
   return (
@@ -31,10 +30,7 @@ const TheBlogPostContent = (props) => {
 
         {/* END OF NAV */}
 
-        <div
-          id="main-container"
-          className="container mx-auto px-6 py-12 w-full lg:w-2/4"
-        >
+        <div className="container mx-auto px-6 py-12 w-full lg:w-2/4">
           <div className="text-4xl lg:text-5xl">
             <p className="text-black font-thin text-center">
               {props.title.rendered}
@@ -60,7 +56,7 @@ const TheBlogPostContent = (props) => {
       {/* END OF HERO */}
 
       <div className="w-full lg:w-1/2 xl:w-1/2 mx-auto py-10 px-10">
-        <div id="HTML-insert-of-blog-post" className="pb-12">
+        <div className="pb-12">
           <div
             dangerouslySetInnerHTML={{ __html: props.content.rendered }}
             className="blog"

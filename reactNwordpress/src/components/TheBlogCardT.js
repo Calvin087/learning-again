@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 // w-full lg:w-1/3 flex-1 p-2
 const TheBlogCard = (props) => {
-  const date = new Date(props.date).toDateString()
-  
+  const date = new Date(props.date).toDateString();
+
   return (
     <div className="hover:shadow-2xl transition ease-out duration-500">
       <div className="flex">
@@ -17,7 +17,7 @@ const TheBlogCard = (props) => {
       </div>
 
       <div className="bg-gray-200 rounded-tl-none rounded-lg border-2 border-black">
-        <div id="header-image-border-bottom">
+        <div>
           <img
             className="h-48 w-full object-cover object-top rounded-tr-lg rounded-tl-none border-b-2 border-black"
             src={props.acf.Featured_Image}
@@ -25,7 +25,7 @@ const TheBlogCard = (props) => {
         </div>
 
         <div className="px-4">
-          <div id="left-label-background-bottom-fixed-image">
+          <div>
             <div className="text-2xl">
               <p className="text-black font-thin text-center py-4 mx-auto">
                 {props.title.rendered}
@@ -38,10 +38,7 @@ const TheBlogCard = (props) => {
             ></p>
           </div>
 
-          <div
-            id="button-container"
-            className="flex justify-between pt-4 pb-5 relative"
-          >
+          <div className="flex justify-between pt-4 pb-5 relative">
             <Link to={`blog/${props.slug}`}>
               <button
                 style={{

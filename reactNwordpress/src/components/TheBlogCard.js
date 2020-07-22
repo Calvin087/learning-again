@@ -13,7 +13,7 @@ const TheBlogCard = () => (
     </div>
 
     <div className="bg-gray-200 rounded-tl-none rounded-lg border-2 border-black">
-      <div id="header-image-border-bottom">
+      <div>
         <img
           className="h-48 w-full object-cover object-top rounded-tr-lg rounded-tl-none border-b-2 border-black"
           src="https://wallpaperboat.com/wp-content/uploads/2020/04/gundam-wallpaper-full-hd.jpg"
@@ -21,7 +21,7 @@ const TheBlogCard = () => (
       </div>
 
       <div className="px-4">
-        <div id="left-label-background-bottom-fixed-image">
+        <div>
           <div className="text-2xl">
             <p className="text-black font-thin text-center py-4 mx-auto">
               Building the JS Calculator app using Tailwind CSS
@@ -34,10 +34,7 @@ const TheBlogCard = () => (
           </p>
         </div>
 
-        <div
-          id="button-container"
-          className="flex justify-between pt-4 pb-5 relative"
-        >
+        <div className="flex justify-between pt-4 pb-5 relative">
           <button
             style={{
               backgroundImage: `url("../images/button-150-50.png")`,

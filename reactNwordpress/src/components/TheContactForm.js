@@ -15,7 +15,7 @@ const TheContactForm = () => {
       body: data,
     });
     setSuccess(true);
-    document.getElementById("myform").reset()
+    document.getElementById("myform").reset();
   }
 
   return (

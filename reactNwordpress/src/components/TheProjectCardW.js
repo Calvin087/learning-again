@@ -3,7 +3,7 @@ import React from "react";
 const TheProjectCardW = (props) => (
   <div className="w-full md:w-1/2 xl:w-1/4 p-2">
     <div className="bg-gray-200 rounded-lg border-2 border-black hover:shadow-2xl transition ease-out duration-500">
-      <div id="header-image-border-bottom">
+      <div>
         <img
           className="h-48 w-full object-cover object-top rounded-tl-lg rounded-tr-lg border-b-2 border-black"
           src={props.image}
@@ -30,7 +30,7 @@ const TheProjectCardW = (props) => (
           </p>
         </div>
 
-        <div id="left-label-background-bottom-fixed-image" className="w-3/4">
+        <div className="w-3/4">
           <div className="text-2xl pb-4">
             <p className="text-black font-thin">{props.title}</p>
           </div>

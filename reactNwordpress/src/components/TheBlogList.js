@@ -2,11 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { WordpressContext } from "../contexts/WordpressContext";
 import TheNavigation from "./TheNavigation";
-import TheBlogCardT from './TheBlogCardT'
+import TheBlogCardT from "./TheBlogCardT";
 
 const TheBlogList = () => {
   const { posts } = useContext(WordpressContext);
-  
 
   return (
     <div>
@@ -18,11 +17,8 @@ const TheBlogList = () => {
       >
         <TheNavigation />
 
-        <div
-          id="main-container"
-          className="container mx-auto px-6 py-12 lg:w-2/6 xl:w-2/6"
-        >
-          <div id="great087-image" class="w-full ">
+        <div className="container mx-auto px-6 py-12 lg:w-2/6 xl:w-2/6">
+          <div className="w-full ">
             <img src="../images/the-blog.png" />
           </div>
 
@@ -60,39 +56,6 @@ const TheBlogList = () => {
       </div>
     </div>
   );
-}
+};
 
 export default TheBlogList;
-
-
-      // {
-      //   posts.map((post, index) => (
-      //     <div class="container" key={post.id}>
-      //       <article class="media">
-      //         <div class="media-content">
-      //           <div class="content">
-      //             <p>
-      //               <Link to={`blog/${post.slug}`}>
-      //                 <h3>{post.title.rendered}</h3>{" "}
-      //               </Link>
-      //               <span
-      //                 dangerouslySetInnerHTML={{
-      //                   __html: post.excerpt.rendered,
-      //                 }}
-      //               ></span>
-      //               <br />
-      //               <div class="buttons">
-      //                 <Link to={`blog/${post.slug}`}>
-      //                   <button class="button is-info">Read More</button>
-      //                 </Link>
-      //               </div>
-
-      //               <br />
-      //             </p>
-      //           </div>
-      //         </div>
-      //       </article>
-      //       <br />
-      //     </div>
-      //   ));
-      // }

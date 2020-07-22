@@ -11,7 +11,6 @@ const TheFooter = () => (
       className="h-4 mt-40"
     ></div>
     <div
-      id="main-container"
       className="w-full flex mx-auto px-6 pb-12"
       style={{
         backgroundImage: `url("../images/background-dots.png")`,
@@ -19,15 +18,9 @@ const TheFooter = () => (
       }}
     >
       <div className="container flex">
-        <div id="col1" className="w-1/2">
-          <div
-            id="image-and-text"
-            className="flex flex-wrap mt-12 mr-6 xl:mt-16"
-          >
-            <img
-              src="../images/logo.png"
-              className="mr-4 mb-4 h-full"
-            />
+        <div className="w-1/2">
+          <div className="flex flex-wrap mt-12 mr-6 xl:mt-16">
+            <img src="../images/logo.png" className="mr-4 mb-4 h-full" />
 
             <div className="text-sm w-full xl:w-1/2">
               <strong>Calvin Torra</strong> <i>(Turner)</i> - Web developer
@@ -55,15 +48,12 @@ const TheFooter = () => (
           </div>
         </div>
 
-        <div
-          id="col1"
-          className="w-1/2 xl:-mt-20 bg-white p-6 mt-10 rounded-lg border-2 border-black"
-        >
+        <div className="w-1/2 xl:-mt-20 bg-white p-6 mt-10 rounded-lg border-2 border-black">
           <p className="text-2xl mb-10 font-semibold">
             Contact<span className="text-red-700 font-thin">Me</span>
           </p>
 
-          <div id="contact">
+          <div>
             <TheContactForm />
           </div>
         </div>
