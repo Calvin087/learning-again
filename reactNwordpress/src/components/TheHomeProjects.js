@@ -21,7 +21,6 @@ const TheHomeProjects = () => (
         description={
           "Taking my portfolio from wordpress to React and hacking together a blog API"
         }
-   
       />
       <TheProjectCardR
         image={
@@ -45,7 +44,7 @@ const TheHomeProjects = () => (
       />
       <TheProjectCardR
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.44.31_640x400.png"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/lockdown.png"
         }
         title={"Lockdown Productivity App"}
         description={
