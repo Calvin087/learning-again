@@ -28,9 +28,9 @@ const TheHomeProjects = () => (
         }
         title={"Black Economics Biz Directory"}
         description={
-          "An ongoing project currently using Google Sheets as a backend API"
+          "Currently Rebuilding This Project to become a larger portal OCT 2020"
         }
-        link={"https://black-economics.web.app/"}
+        link={"https://calvintorra.com/"}
       />
       <TheProjectCardR
         image={

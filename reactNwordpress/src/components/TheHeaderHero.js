@@ -164,7 +164,7 @@ const TheHeaderHero = () => (
         </div>
       </div>
     </div>
-    <div className="container">
+    <div id="projects" className="container">
       <TheHomeProjects />
     </div>
   </div>

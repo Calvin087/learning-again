@@ -19,7 +19,7 @@ const TheContactForm = () => {
   }
 
   return (
-    <div>
+    <div id="contact">
       <form id="myform" onSubmit={handleSubmit} className="flex flex-col">
         <label htmlFor="FNAME" className="-mt-2">
           Name:

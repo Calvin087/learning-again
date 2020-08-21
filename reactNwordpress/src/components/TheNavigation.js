@@ -1,8 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
-const TheNavigation = () => (
+
+
+const TheNavigation = () => {
+
+  let location = useLocation();
+
+  return (
   <nav className="container flex items-center justify-between flex-wrap px-6">
     <div>
       <Link to={`/`}>
@@ -10,7 +16,7 @@ const TheNavigation = () => (
       </Link>
     </div>
 
-    <div className="w-full block flex-grow flex lg:items-center lg:w-auto">
+    <div className="w-full block sm:flex flex-grow lg:items-center lg:w-auto">
       <div className="lg:flex-grow">
         <p className="block mt-4 lg:inline-block lg:mt-0 mr-4 lg:ml-8">
           Welcome///USER:///
@@ -34,7 +40,7 @@ const TheNavigation = () => (
 
           <HashLink
             className=" block mt-4 lg:inline-block lg:mt-0 font-medium"
-            to={`/#contact`}
+            to={`${location.pathname}#contact`}
           >
             Contact Me<span className="text-red-500"> _</span>
           </HashLink>
@@ -42,6 +48,7 @@ const TheNavigation = () => (
       </div>
     </div>
   </nav>
-);
+  )
+};
 
 export default TheNavigation;
