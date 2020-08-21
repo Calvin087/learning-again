@@ -31,7 +31,7 @@ const TheHeaderHero = () => (
 
           <div className="pr-16">
             <p className="font-semibold text-4xl lg:text-5xl xl:text-5xl">
-              Frontend<span className="text-red-700 font-thin">Developer</span>
+              Frontend<span className="text-red-700 font-thin">Engineer</span>
             </p>
           </div>
 
