@@ -24,13 +24,13 @@ const TheHomeProjects = () => (
       />
       <TheProjectCardR
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.42.10_640x400.png"
+          "http://calvint1.sg-host.com/wp-content/uploads/2020/08/blacumen.jpg"
         }
-        title={"Black Economics Biz Directory"}
+        title={"Blacumen - Black Community"}
         description={
-          "Currently Rebuilding This Project to become a larger portal OCT 2020"
+          "Business directory, book list, video archive for the black community."
         }
-        link={"https://calvintorra.com/"}
+        link={"https://blacumen.com"}
       />
       <TheProjectCardR
         image={
