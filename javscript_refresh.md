@@ -1,3 +1,6 @@
+- [Events guide](https://developer.mozilla.org/en-US/docs/Web/Events)
+- [NodeJS equiv of events](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect)
+
 ## Math
 
 **Order of precedence**
@@ -300,4 +303,141 @@ let removed = arr.pop()
 console.log(removed);
 
 // >> here;
+```
+
+## If's and Elses
+
+Variables that have a value automatically return ```True``` or ```Truthy```.
+
+```js
+let cheese = "Cheddar";
+
+if (cheese) {
+  console.log("Yay! Cheese available for making cheese on toast.");
+} else {
+  console.log("No cheese on toast for you today.");
+}
+```
+
+**Logical Operators**
+
+Not forgetting ```&&```. Both sides of the evaluation have to return true for this to pass otherwise it's false.
+
+Or is the other way to do things with ```||```.
+
+## Switch Statements
+
+Each case has to end with a ```break``` otherwise every case will run and log everything.
+
+```js
+let variableCheck = "lucie"
+
+switch (variableCheck) {
+    case "dave":
+        console.log("Hey Dave");
+        break
+    case "sam":
+        console.log("You're not Dave!");
+        break;
+    case "lucie":
+        console.log("Have you seen Dave?");
+        break;
+}
+
+// >> Have you seen Dave?
+```
+
+## Ternary Operators
+
+Condition to be true inside the parens and true and false consequences beside :.
+
+```js
+let variableCheck = "lucie"
+
+console.log((variableCheck === "lucie") ? "Hey Lu" : "Who are you?")
+
+// >> Hey Lu
+```
+
+Nice use case here
+
+```js
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+select.onchange = function () {
+  select.value === "black"
+    ? update("black", "white")
+    : update("white", "black");
+};
+
+```
+
+## Looping
+
+This if statement handles the end of the sentence with a full stop after everything.
+
+```js
+const dogs = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
+let info = "My dogs are called ";
+
+for (let i = 0; i < dogs.length; i++) {
+  if (i === dogs.length - 1) {
+    info += 'and ' + dogs[i] + '.';
+  } else {
+    info += dogs[i] + ', ';
+  }
+}
+
+console.log(info);
+
+// >> My dogs are called Bill, Jeff, Pete.
+```
+
+## Event Listeners
+
+Seems to be more similar to react when assigning click handlers.
+
+```js
+const btn = document.querySelector('button');
+
+function bgChange() {
+  let rndCol = 'rgb(' + random(255)...';
+  document.body.style.backgroundColor = rndCol;
+}   
+
+btn.addEventListener('click', bgChange);
+```
+
+Can also be written like the below. Passing the event type as well as the function to run when triggered.
+
+```js
+btn.addEventListener('click', function() {
+  let rndCol = 'rgb(' + random(255)...';
+  document.body.style.backgroundColor = rndCol;
+});
+```
+
+You can also have the same button perform different things based on user journey. Removing event listeners and assigning them something else later.
+
+```js
+myElement.addEventListener('click', functionA);
+```
+
+### Event handlers (e)
+
+See this alot in react if i remember correctly. This is called the "**event object**".
+
+In the below exaple, ```e``` in the function is always in reference to the element the event occurred upon. So in this example ```e``` is the button and not the page background.
+
+```js
+function bgChange(e) {
+  let rndCol = 'rgb(' + random(255)...';
+  e.target.style.backgroundColor = rndCol;
+  console.log(e);
+}  
+
+btn.addEventListener('click', bgChange);
 ```

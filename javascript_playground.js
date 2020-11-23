@@ -1,8 +1,11 @@
-let myString = "something about my life goes here"
-let arr = myString.split(" ")
+function a() {
+  let y = 2;
+  output(x);
+}
 
-let removed = arr.pop()
+function b() {
+  let z = 3;
+  output(x);
+}
 
-console.log(removed);
-
-// >> here;
+a()
