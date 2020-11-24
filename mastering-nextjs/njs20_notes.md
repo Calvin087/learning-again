@@ -126,4 +126,9 @@ const Home = () => {
         </button>
 ```
 
-? optional chaining allows you to safely acess nested properties
+? optional chaining allows you to safely acess nested properties???
+
+**Extending the use of Firebase with Firestore** 
+https://www.youtube.com/watch?v=AGl52moyISU&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=3&ab_channel=LeeRobinson
+
+20:15

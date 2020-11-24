@@ -441,3 +441,15 @@ function bgChange(e) {
 
 btn.addEventListener('click', bgChange);
 ```
+
+Example of looping through elements and adding ```onClick``` event listeners to them, while also passing the function(e).
+
+```js
+const divs = document.querySelectorAll('div');
+
+for (let i = 0; i < divs.length; i++) {
+  divs[i].onclick = function(e) {
+    e.target.style.backgroundColor = bgChange();
+  }
+}
+```
