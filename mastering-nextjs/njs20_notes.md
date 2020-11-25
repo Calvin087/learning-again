@@ -129,6 +129,36 @@ const Home = () => {
 ? optional chaining allows you to safely acess nested properties???
 
 **Extending the use of Firebase with Firestore** 
-https://www.youtube.com/watch?v=AGl52moyISU&list=PL6bwFJ82M6FXgctyoWXqj7H0GK8_YIeF1&index=3&ab_channel=LeeRobinson
+- storing information about users
+- pricing plan info, profile images etc
 
-20:15
+**Cloud Firestore**
+- Start in test mode
+- We created a file called .db.js
+- Made a function, takes the logged in user and saves it to firestore.
+  
+Messed me up. Without the firestore it didn't work.
+
+```
+|-lib
+    |-db.js
+```
+
+```js
+
+import firebase from './firebase'
+import 'firebase/firestore'
+
+```
+
+## ChakraUi
+
+[Getting Started](https://chakra-ui.com/docs/getting-started)
+
+- ```import { theme as chakraTheme } from '@chakra-ui/core';```
+- For Chakra UI to work correctly, you need to setup the ChakraProvider at the root of your application ```_app.js```
+- Import font from google
+- Override [`Document`](https://nextjs.org/docs/advanced-features/custom-document)
+  - _document.js Allows me to modify the markup that comes from the server
+- Added ```theme.js``` to override chakra settings
+- Wrap app in chakra provider using ```_app.js```
