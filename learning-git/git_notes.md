@@ -138,3 +138,63 @@ When git is unable to resolve conflicts, enters a conflicting merge state. All c
   - ```git merge updates``` while on *master
 - Once we have Head Master Updates all pointing to the same commit ID, we no longer need the "updates branch"
   - ```git branch -d updates```
+
+**Conflicts**
+Trying to merge two files with edits in the same place
+- ```cat {fileName}``` shows us the complete file in terminal.
+```
+<<<<<<< HEAD
+I hope this isn't a problem
+=======
+This is bound to cause trouble!
+>>>>>>> very-bad
+```
+- ```git mergetool``` This brings up the tool to check the changes.
+  - Scroll through the change possibilities, save and exit.
+  - Then commit what was saved ```git commit -m "something"```
+  - Ignore ```.orig``` files
+
+
+</br>
+
+### Tags
+
+Marking milestones / tags inside git commit points.
+
+- ```git tag {myTag}```
+- ```git tag -a v1.0 -m "Release 1.0"``` == Annotated tags
+- ```git show v1.0``` == Show deets
+- ```git tag --list```
+
+</br>
+
+### Stashing
+
+- ```git stash```
+- ```git stash pop``` get's us back to where we were and deletes the stash
+
+
+</br>
+
+### Time Travel
+
+- ```git hist``` to see commits available.
+- ```git reset {commitID} --soft``` changes where head is pointed / --mixed --hard
+- ```git reflog``` gets us to see all Head changes in repo
+- Using a mixture of RESET and REFLOG we can move to and from different moments in time.
+
+</br>
+
+### Github
+
+- ```git remote -v``` to check remote connections
+- ```git remote add origin https://github.com/zzzzzzz``` 
+
+Syncing up
+- git push -u origin master --tags
+  - -u sets up a tracking branch between master local and master remote.
+  - origin is the name of the remote repo?
+  - name of the branch we're using to push up.
+  - tags sends all tags up to Github.
+
+Video 44 0.18
