@@ -110,6 +110,19 @@ Commits are saved to a timeline called a Branch. Repositories usually have one b
 
 ### Branching Merging
 
+**Local Branches then to Github**
+- ```git checkout -b {nameOfBranch}```
+
+**Prune**
+- ```git fetch -p```
+
+**Delete remote branches**
+- ```git push origin :{branchName}
+
+**On Github**
+
+Adding new files to github directly allows me to also choose a branch if need be, which effectively is a pull request. I can then merge pull requests and delete branches once they're not needed anymore.
+
 Branches are just a timeline of commits
 Branches are Names or Labels that we give timelines in Git
 We can create or delete branches without affecting timelines, we're just modifying labels of commit ranges?
@@ -191,10 +204,69 @@ Marking milestones / tags inside git commit points.
 - ```git remote add origin https://github.com/zzzzzzz``` 
 
 Syncing up
-- git push -u origin master --tags
+- ```git push (-u) origin master --tags```
   - -u sets up a tracking branch between master local and master remote.
   - origin is the name of the remote repo?
   - name of the branch we're using to push up.
   - tags sends all tags up to Github.
 
-Video 44 0.18
+</br>
+
+### SSH Key
+
+Look into this again
+
+- ```mkdir .ssh```
+  - ```cd .ssh```
+- ```ssh-keygen -t rsa -C "calvin+1@sliame.com"```
+
+</br>
+
+### Cloning
+
+- ```git clone {httpsURL} {folderNameChoice}
+
+</br>
+
+### Fetch and Pull
+
+If there are changes on github and I try to push my changes as well, i'll get an error - Tells me i have to pull first.
+
+PULL is a ```Fetch``` and ```Merge``` at the same time really.
+
+**PULL** **Could** be destructive if used when we don't have compatible changes locally. Instead we can **Fetch** then git pull if we're happy with the updates.
+
+</br>
+
+### Repo name changes
+
+If the name of the repo change on GH you need to copy the url again and set it in the terminal.
+
+- ```git remote set-url origin {url}```
+
+
+</br>
+
+### Rebase
+
+[Rebase](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+
+
+</br>
+
+### Graphing
+
+- [Graphs on Github](https://github.com/Calvin087/demo-two/pulse)
+- ```git log --oneline --graph```
+
+</br>
+
+### Tags
+
+- ```git tag {tagName} {branch}```
+  - These are simple lightweight commits, no infomation added
+- ```git tag -a v0.1-alpha -m "Release 0.1 (Alpha)" {commitID}```
+  - ```git show v0.1-alpha```
+  - release / annotated tags
+- Git pull
+- ```git push origin {tagName}```
