@@ -1,5 +1,6 @@
 ## The basics.
 - [The CheatSheet](https://education.github.com/git-cheat-sheet-education.pdf)
+- Pull Requests are asking the Parent to **Pull** in your changes
 
 Git managed folders should be kept separate. Front end folders and backend folders should not be combined. One Repository per application
 
@@ -270,3 +271,23 @@ If the name of the repo change on GH you need to copy the url again and set it i
   - release / annotated tags
 - Git pull
 - ```git push origin {tagName}```
+
+</br>
+
+### Contributions / Forking
+
+- Fork a repo
+  - clone your fork into local
+- CD into the new folder
+- ```git checkout -b feature-readme```
+- make a new file
+- stage and commit
+- ```git push -u origin feature-readme```
+- Github -> Change branch -> Compare and pull request
+- Check relationship comparisons
+- **Create pull request**
+
+
+### Closing issues from Git
+
+The # number in the title of the issue on Github needs to be used later. Get on the correct branch - Pull the most recent files from remote, make the updates and the commit using "Commit Message, close #{issue number}"

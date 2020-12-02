@@ -453,3 +453,5 @@ for (let i = 0; i < divs.length; i++) {
   }
 }
 ```
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+Preventing default behavior
