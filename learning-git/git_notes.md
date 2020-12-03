@@ -291,3 +291,5 @@ If the name of the repo change on GH you need to copy the url again and set it i
 ### Closing issues from Git
 
 The # number in the title of the issue on Github needs to be used later. Get on the correct branch - Pull the most recent files from remote, make the updates and the commit using "Commit Message, close #{issue number}"
+
+You can also tag / metion certain issues in Github comments using #{issue id}
