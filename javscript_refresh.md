@@ -64,12 +64,16 @@ console.log(typeof(myNum));
 
 let myNum = 12344
 let myString = toString(myNum);
+let myStringNew = myNum.toString();
+
 
 console.log(typeof(myNum));
 console.log(typeof(myString));
+console.log(typeof(myStringNew));
 
 // >> number
 // >> string
+// '12344'
 
 ```
 

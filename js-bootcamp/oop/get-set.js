@@ -12,4 +12,5 @@ const data = {
 
 data.location = '   Madrid'
 data.location = 'New York '
+data.location = 'Coulsdon n York '
 console.log(data)
