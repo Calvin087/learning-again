@@ -15,12 +15,13 @@ const TheHomeProjects = () => (
     <div className="flex flex-wrap p-4">
       <TheProjectCardR
         image={
-          "http://calvint1.sg-host.com/wp-content/uploads/2020/07/Screenshot-2020-07-18-at-16.39.13_640x400.png"
+          "https://calvint1.sg-host.com/wp-content/uploads/2021/04/Screenshot-2021-04-13-at-21.22.27.png"
         }
-        title={"Calvin T's website redesign"}
+        title={"Wordpress 2 Email - wp2email.com"}
         description={
-          "Taking my portfolio from wordpress to React and hacking together a blog API"
+          "Create High Quality Email Newsletters For Your Clients in Seconds."
         }
+        link={"https://wp2email.com/"}
       />
       <TheProjectCardR
         image={
