@@ -55,11 +55,13 @@ const TheBlogPostContent = (props) => {
 
       {/* END OF HERO */}
 
-      <div className="w-full lg:w-1/2 xl:w-1/2 mx-auto py-10 px-10">
+      <div className="max-w-xl mx-auto py-10 px-10">
+      {/* <div className="w-full lg:w-1/2 xl:w-1/2 mx-auto py-10 px-10"> */}
         <div className="pb-12">
           <div
             dangerouslySetInnerHTML={{ __html: props.content.rendered }}
             className="blog"
+
           ></div>
         </div>
 
